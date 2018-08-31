@@ -1,0 +1,16 @@
+// General layout classes //
+
+hgroup {
+  text-align: center;
+  margin: 3vh 0 8vh 0;
+  img {
+    width: 100%;
+    max-width: 180px;
+    display: block;
+    margin: 0 auto;
+    &.logo-gov {
+      margin-bottom: 2em;
+      max-width: 220px;
+    }
+  } 
+}

@@ -1,0 +1,133 @@
+/**********************************
+	Specific typographic styling
+
+**********************************/
+
+// Fonts
+
+body {
+  margin: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  line-height: $prototype-leading;
+  font-family: $prototype-font-body;
+  color: $prototype-text-colour;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  border-bottom: solid 1px $blue;
+  transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $black;
+    border-color: transparent;
+  }
+}
+
+p {
+  max-width: $prototype-maxwidth;
+  margin: 0 0 $margin-bottom-default 0;
+  &.intro,
+  &.breadcrumbs {
+    margin: 1em 0 0.75em 0;
+  }
+  &.breadcrumbs {
+    font-size: 0.9rem;
+  }
+}
+
+ul,
+ol,
+dl,
+pre {
+  margin-top: 0;
+  margin-bottom: $margin-bottom-default;
+}
+code {
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  border: 1px solid $yellow;
+  background-color: tint($yellow, 60%);
+  padding: 0.2em 0.25em;
+}
+
+li {
+  max-width: $prototype-maxwidth;
+}
+
+
+// Horizontal Rule styling
+
+hr {
+  border: 0;
+  border-top: 1px solid $gray-light;
+  margin: 2em 0 3em 0;
+}
+
+// Responsive headings
+
+h1 {
+  font-weight: bold !important;
+  font-size: 1.75rem;
+  em {
+    padding: 0;
+    font-size: 1.2rem;
+    font-style: normal;
+    display: block;
+    margin: 0 0 0 0.4em;
+    color: $gray-mid;
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: $small-handheld) {
+  h1 {
+    font-size: 2rem;
+    em {
+      display: inline;
+      padding: 0.25em 0 0.25em 0.75em;
+      border-left: 5px solid $yellow;
+      font-size: 1.4rem;
+      margin-left: 0.4em;
+      vertical-align: middle;
+    }
+  }
+}
+
+.application {
+  h1 {
+    line-height: 1;
+    padding-top: 0;
+    margin-top: -0.25em;
+    margin-bottom: 1em;
+  }
+}
+
+h2 {
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+h3 {
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+h4 {
+  font-weight: normal;
+  font-size: 1.1rem;
+}
+
+// Control heading icon sizing
+
+h1,
+h2,
+h3 {
+  img {
+    max-width: 28px;
+    max-height: 28px;
+    vertical-align: top;
+    margin-right: 0.25em;
+    margin-bottom: 0.5em;
+  }
+}

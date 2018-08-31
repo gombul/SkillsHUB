@@ -1,0 +1,24 @@
+// Unauthenticated pages //
+
+.hero {
+  background-image: url(../img/bg-hero.jpg);
+  background-position: 70% top;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container-signin {
+  padding: 0 2em;
+}
+
+.container-intro {
+  padding: 13vh 25vw 5vh 8vw;
+  color: black;
+  text-shadow: 0 0 5px #FFFFFF;
+  h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

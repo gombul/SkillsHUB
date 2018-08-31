@@ -1,0 +1,68 @@
+/**********************************
+	Variables
+
+**********************************/
+
+// Typography
+
+@font-face {
+	font-family: 'news_gothic_bt-webfont';
+	src: url('news_gothic_bt-webfont.eot');
+	src: url('news_gothic_bt-webfont?#iefix') format('embedded-opentype'),
+			 url('news_gothic_bt-webfont.woff2') format('woff2'),
+			 url('news_gothic_bt-webfont.woff') format('woff'),
+			 url('news_gothic_bt-webfont.ttf') format('truetype'),
+			 url('news_gothic_bt-webfont.svg#news_gothic_bt-webfont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$prototype-font-heading: 'news_gothic_bt-webfont', 'Helvetica', 'Arial', sans-serif;
+$prototype-font-body: 'news_gothic_bt-webfont', 'Helvetica', 'Arial', sans-serif;
+$prototype-text-colour: #444;
+$prototype-leading: 1.6;
+$prototype-grid-12-columns: 12t;
+$prototype-grid-12-gutter-width: 24px;
+
+// Margins, padding and corners
+
+$margin-bottom-default: 1em;
+$prototype-maxwidth: 60em;
+$prototype-border-radius: 4px;
+
+// Breakpoints
+
+$small-handheld: 480px;
+$medium-handheld: 650px;
+$large-handheld: 768px;
+$medium-tablet: 960px;
+$max-width: 1400px;
+
+// Brand colours
+
+$blue: #3B53A4;
+$yellow: #E9A913;
+$purple: #522760;
+
+// User feedback
+
+$red: #CC3000;
+$green: #23C966;
+$orange: #C97D23;
+
+// Tones
+
+$white: #ffffff; 
+$gray-ultralight: #f5f5f5; 
+$gray-light: #ededed;
+$gray-mid: #666666;
+$gray-dark: #4A4A4A;
+$black: #252525;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
