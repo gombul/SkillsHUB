@@ -1,0 +1,359 @@
+// Table styling
+
+table {
+  border-top: 1px solid $gray-light;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 2em;
+
+  caption {
+    max-width: 100%;
+    caption-side: top !important;
+  }
+
+  select {
+    display: inline;
+    width: auto;
+    margin: 0;
+    vertical-align: middle;
+    font-size: .9rem;
+    padding: 0.425em 0.35em;
+  }
+
+  th,
+  td {
+    padding: 0.65em 1em 0.65em 1em;
+    text-align: left;
+    vertical-align: top;
+
+    .btn-primary {
+      font-weight: normal;
+    }
+
+    .btn-small {
+      margin: 0.25em 0 !important;
+      padding: 0.4em 0.75em;
+    }
+  }
+
+  th {
+    border-bottom: 1px solid $gray-light;
+    background-color: tint($gray-mid, 75%);
+    border-top: none;
+    text-align: left;
+  }
+
+  td {
+    border-bottom: 1px solid $gray-light;
+    background-color: white;
+    font-size: 0.9rem;
+
+    &.border-dotted {
+      border-bottom: 1px dotted $gray-light;
+    }
+  }
+
+  label, .hint {
+    font-size: 0.9rem !important;
+  }
+}
+
+// Break out link in table caption
+
+.table-popout {
+  background: url(../img/ico-popup.svg) no-repeat 0 0.7em;
+  background-size: 16px 16px;
+  display: inline-block;
+  padding: 0.15em 0.25em 0 24px;
+  font-size: 0.9rem;
+  float: right;
+}
+
+// responsive table
+@media screen and (max-width: $medium-handheld) {
+  .table-responsive {
+
+    thead {
+      display: none;
+    }
+
+    tr:nth-of-type(2n) {
+      background-color: inherit;
+    }
+
+    tr td:first-child {
+      background: $gray-light;
+      font-weight: bold;
+    }
+
+    tbody td {
+      display: block;
+      text-align: center;
+    }
+
+    tbody td:before {
+      content: attr(data-th);
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+// Sortable data table
+
+table.tablesorter {
+  thead tr {
+    .header {
+      background: $gray-light url(../img/bg.gif) no-repeat 100% 50%;
+      cursor: pointer;
+    }
+
+    .headerSortDown,
+    .headerSortUp {
+      background-color: tint($gray-mid, 75%);
+    }
+
+    .headerSortUp {
+      background-image: url(../img/asc.gif);
+    }
+
+    .headerSortDown {
+      background-image: url(../img/desc.gif);
+    }
+  }
+}
+
+tr.important {
+  td {
+    background-color: tint($yellow, 90%);
+    border-bottom: 1px solid tint($yellow, 60%);
+  }
+}
+
+// For verify details 2 column
+
+table.verify-details {
+  td:first-child {
+    width: 30%;
+  }
+}
+
+// Data collection status with all columns
+
+table.data-collections {
+  td {
+    padding-top: 0.5em;
+    padding-bottom: 0.25em;
+    vertical-align: middle;
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5), 
+    &:nth-child(6) {
+      padding: 0.5em 0.5em 0.25em 0.5em;
+    }
+  }
+
+  .data-collection-name {
+    width: 41%;
+  }
+
+  .due-date {
+    width: 15%;
+  }
+
+  .status {
+    width: 11%;
+    text-align: center;
+  }
+}
+// List of multiple schools in data collection detail pages
+table.school-data {
+  margin-bottom: 1em;
+
+  th:first-child, td:first-child {
+    width: 40%;
+  }
+
+  th:nth-child(2), td:nth-child(2) {
+    width: 25%;
+  }
+
+  th:last-child, td:last-child {
+    width: 35%;
+    text-align: right;
+  }
+
+  td {
+    padding: 0.35em 1em 0.35em 1em;
+    vertical-align: middle;
+  }
+
+  .sub-heading {
+    background-color: tint($gray-mid, 80%);
+    font-weight: normal;
+    border-top: 1px solid $white;
+    text-align: left !important;
+  }
+
+  .btn-small {
+    padding: 0.3em 0.65em;
+    font-size: 0.9rem;
+    border-radius: 3px;
+    min-width: 6em;
+    margin: 0 0 0 0;
+  }
+
+  .btn-wide {
+    width: 10.25em;
+  }
+}
+// Data collection calendar table
+table.collection-calendar {
+  th, td {
+    text-align: center;
+    width: 7%;
+  }
+
+  td {
+    padding: 0.35em 1em 0.35em 1em;
+  }
+
+  .collection {
+    width: 51%;
+    text-align: left;
+  }
+
+  .active-cell {
+    background-color: $yellow;
+    border-right: 1px solid $gray-light;
+  }
+}
+// Data collection data table
+table.data {
+  th span {
+    font-weight: normal;
+  }
+
+  td {
+    padding: 0.5em 0.5em 0.5em 1em;
+  }
+
+  &.readonly {
+    td {
+      padding: 0.25em 0.5em 0.25em 1em;
+    }
+  }
+
+  .total {
+    td {
+      padding: 0.75em 0.5em 0.75em 1em;
+      background-color: tint($gray-mid, 80);
+      font-weight: bold;
+    }
+  }
+
+  .highlight {
+    td {
+      background-color: tint($yellow, 80);
+      border-bottom: 1px solid tint($yellow, 60);
+    }
+  }
+
+  .item {
+    width: 6%;
+  }
+
+  .description {
+    width: 38%;
+  }
+
+  .value {
+    width: 13%;
+  }
+
+  .help {
+    width: 4%;
+  }
+
+  input[type=text] {
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    margin: 0;
+    padding: 0.15em 0.2em;
+    font-size: 0.9rem;
+    width: 75%;
+  }
+  // Dollar sign to prepend currency inputs
+  span.currency {
+    color: $gray-mid;
+    display: inline-block;
+    padding: 0.15em 0.65em 0.15em 0;
+    line-height: 1.5;
+    margin-right: -5px;
+  }
+}
+
+table.data-fa {
+  th:first-child, td:first-child {
+    width: 80%;
+  }
+  th:last-child, td:last-child {
+    width: 20%;
+    text-align: right;
+  }
+}
+
+// Table showing amounts entered for reference on My Schools screen
+table.reference {
+  tr.important {
+    td {
+      background-color: tint($yellow, 75%);
+      transition: background-color 0.5s;
+    }
+  }
+
+  th, td {
+    background-color: transparent;
+    border-bottom: 1px solid tint($yellow, 60%);
+  }
+
+  th {
+    background-color: tint($yellow, 60%);
+  }
+
+  td {
+    padding: 0.3em 1em;
+  }
+
+  th:nth-child(2), td:nth-child(2) {
+    text-align: right;
+  }
+}
+// Verically align TD content
+table.vertical-align {
+  td {
+    vertical-align: middle;
+  }
+
+  .btn-small {
+    min-width: 6em;
+  }
+}
+// Table for profile data
+table.profile {
+  td {
+    ul {
+      padding-left: 1.25em;
+
+      li {
+        font-weight: bold;
+
+        ul li {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

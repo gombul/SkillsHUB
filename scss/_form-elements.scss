@@ -1,0 +1,521 @@
+/**********************************
+	FORM ELEMENTS - form fields and buttons
+
+**********************************/
+
+// Buttons
+
+.btn {
+  display: inline-block;
+  -webkit-appearance: none;
+  border: none;
+  color: $blue;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid $blue;
+  border-radius: $prototype-border-radius;
+  background-color: $white;
+  padding: 0.8em 0.6em;
+  cursor: pointer;
+  transition: background-color .2s ease;
+
+  &:focus,
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $white;
+    font-weight: normal;
+    color: $gray-mid;
+    border: 1px solid tint($gray-mid, 60%);
+    cursor: not-allowed;
+
+    &:focus,
+    &:hover {
+      background-color: $white;
+    }
+  }
+}
+
+.btn-show-password {
+  border: none;
+  color: $blue;
+  border-bottom: 1px solid $blue;
+  cursor: pointer;
+  background-color: white;
+  padding: 0.1em 0;
+  display: inline-block;
+  margin-left: -5em;
+
+  &:focus,
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}
+
+.btn-edit {
+  width: 5em;
+}
+
+
+// Buttons with icons
+
+.btn-xml {
+  background: $blue url(../img/btn-xml.svg) no-repeat 0.7em 50%;
+  background-size: 22px 22px;
+  padding-left: 42px !important;
+}
+
+.btn-field {
+  background: $blue url(../img/btn-field.svg) no-repeat 0.75em 50%;
+  background-size: 22px 22px;
+  padding-left: 44px !important;
+}
+
+@media only screen and (min-width: $medium-handheld) {
+  .btn {
+    padding: 0.8em 1.2em;
+  }
+}
+
+
+.btn-primary {
+  background-color: $blue;
+  color: $white;
+  font-weight: bold;
+}
+
+.btn-tertiary {
+  background-color: $yellow;
+  border: 1px solid $yellow;
+  color: $black;
+}
+
+.btn-small {
+  font-size: 0.9rem;
+  padding: 0.6em 0.75em;
+}
+
+// Copy text function for warning textarea boxes
+.copy-text {
+  height: 18px;
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 0 0 0 30px;
+  background: transparent url(../img/ico-copy.svg) no-repeat 5px 0;
+  background-size: 18px 18px;
+  text-decoration: none;
+}
+
+// Text inputs
+
+label {
+  display: block;
+  margin-bottom: 0;
+
+  > .text-input {
+    margin-top: 0.5em;
+  }
+}
+
+// Controls whether label hints are inline or broken
+
+.display-block {
+  display: block;
+}
+
+// Gap between each label and input pair
+.form-group {
+  margin: 0.5em 0 1em 0;
+  clear: both;
+  position: relative;
+}
+
+// Use for filters at the top of widget content areas
+.form-filter {
+  margin: -1em 0 1em 0;
+  clear: both;
+
+  .btn-small {
+    //padding: 0.7em 0.9em !important;
+    margin: -0.5em 0 0 0;
+  }
+}
+
+// Input types
+input, select, textarea {
+  line-height: 1.5;
+  padding: 0.5em 0.4em;
+  font-size: 1.1rem;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+input[type=text],
+input[type=name],
+input[type=date],
+input[type=tel],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=url],
+input[type=search],
+textarea,
+select {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  color: #666666;
+  border: 1px solid #BBBBBB !important;
+  margin: 0.4em 1em 0.4em 0;
+  padding: 0.6em 0.4em;
+  width: 100%;
+  max-width: 42em;
+  font-size: 1rem;
+
+  &:focus,
+  &:hover {
+    background-color: white !important;
+    border: 1px solid $gray-mid !important;
+    outline: none !important;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #EAEAEA !important;
+    color: $gray-mid;
+    border: 1px solid #999999 !important;
+
+    &:focus,
+    &:hover {
+      border: 1px solid #999999 !important;
+      box-shadow: none;
+    }
+  }
+}
+
+textarea {
+  margin: 0 0.5em 0 0;
+}
+
+// Label specific styling
+
+label {
+  font-weight: bold;
+}
+
+.hint {
+  font-weight: normal;
+}
+
+
+// input widths
+
+.dd, .mm, .yyyy {
+  display: inline;
+  width: 2em !important;
+  margin-right: 0 !important;
+}
+
+.yyyy {
+  width: 4em !important;
+}
+
+@media only screen and (min-width: $medium-handheld) {
+  input[type=tel],
+  input.input-half,
+  select.input-half {
+    width: 45%;
+    max-width: 22em;
+  }
+}
+
+
+// Fieldset and captions
+
+fieldset {
+  border: 0;
+  clear: both;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+legend,
+caption {
+  border: 0;
+  padding: 0 0 0.5em 0;
+  text-align: left;
+  line-height: 1.4em;
+  font-size: 1rem;
+  font-weight: bold;
+  max-width: $prototype-maxwidth;
+
+  &.large {
+    font-size: 1.4rem;
+
+    .hint {
+      font-size: 1rem;
+    }
+  }
+}
+
+caption {
+  padding: 0.5em 0.5em 0.25em 0.8em;
+  color: $black;
+  font-size: 1.4rem;
+  line-height: 2;
+  font-weight: normal;
+  background-color: tint($gray-mid, 70);
+}
+
+
+// Container around yes no question sets
+
+.toggle-container {
+  border-bottom: 1px solid tint($gray-mid, 80%);
+  padding: 1.5em 0 0 0;
+
+  &.first {
+    border-top: 1px solid tint($gray-mid, 80%);
+  }
+
+  legend {
+    padding-top: 0.25em;
+  }
+
+  .inline-answer {
+    label {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-tablet) {
+  .toggle-container {
+    legend {
+      width: 45%;
+      float: left;
+    }
+
+    .radio-toggle {
+      float: right;
+    }
+
+    .inline-answer {
+      width: 45%;
+      float: right;
+    }
+
+    .inline-help {
+      margin-left: 1em;
+    }
+  }
+}
+
+// Toggle styled radio buttons - must render on mobile width screens without wrapping
+
+.radio-toggle {
+  label {
+    float: left;
+    width: 120px;
+    margin: 0 0 1.5em 0;
+    background-color: #EFEFEF;
+    border-radius: 4px;
+    padding: 0;
+    border: 1px solid #D0D0D0;
+    overflow: visible;
+    font-weight: normal;
+
+    &.label-left, &.label-left span {
+      border-radius: 4px 0 0 4px;
+      border-right: 0;
+    }
+
+    &.label-right, &.label-right span {
+      border-radius: 0 4px 4px 0;
+    }
+
+    &.label-middle {
+      border-left: 1px solid #D0D0D0;
+      border-right: 0;
+      border-radius: 0;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+    }
+
+    span {
+      text-align: center;
+      padding: 10px 0;
+      display: block;
+      cursor: pointer;
+    }
+
+    input {
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      left: -9999px;
+    }
+  }
+
+  input:focus + span {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+    padding: 9px 0;
+    border: 1px solid $blue;
+  }
+
+  input:checked + span {
+    box-shadow: inset 0px 1px 2px 2px rgba(0,0,0,0.1);
+    background: $gray-mid;
+    color: #FFFFFF;
+    border-color: $gray-mid;
+  }
+
+  input:checked:focus + span {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  input + span:hover,
+  input + span:focus {
+    box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.2);
+  }
+  // Disabled states
+  input:disabled + span:hover,
+  input:disabled + span:focus {
+    box-shadow: none;
+    background: $gray-light;
+    cursor: not-allowed;
+  }
+
+  input:disabled:checked + span {
+    box-shadow: inset 0px 1px 1px 1px rgba(0,0,0,0.1);
+    background: tint($gray-mid, 70);
+    color: $gray-mid;
+  }
+}
+
+
+// Custom radio buttons and checkboxes
+
+.custom-inputs {
+  display: block;
+  position: relative;
+  padding-left: 38px;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 1px solid $gray-mid;
+  background-color: $white;
+  border-radius: 50%;
+}
+
+.custom-inputs-checkbox .checkmark {
+  border-radius: 0;
+}
+
+.custom-inputs:hover input ~ .checkmark {
+  background-color: $white;
+}
+
+.custom-inputs:hover input ~ .checkmark,
+.custom-inputs:focus input ~ .checkmark {
+  -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.3);
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.3);
+}
+
+
+.custom-inputs input:checked ~ .checkmark {
+  background-color: $white;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.custom-inputs input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.custom-inputs .checkmark:after {
+  left: 4px;
+  width: 15px;
+  height: 15px;
+  top: 4px;
+  border-radius: 50%;
+  background: $black;
+}
+
+.custom-inputs-checkbox .checkmark:after {
+  left: 7px;
+  width: 10px;
+  height: 16px;
+  top: 2px;
+  background: none;
+  border-radius: 0;
+  border: solid $black;
+  border-width: 0 5px 5px 0;
+  transform: rotate(45deg);
+}
+
+// Displaying checkboxes inline beside elements like buttons
+.custom-inputs-inline {
+  display: inline-block;
+  width: auto;
+  text-align: left;
+  margin-right: 0.5em;
+  clear: none;
+  .custom-inputs {
+    padding-left: 32px;
+  }
+}
+
+
+// Floated layouts
+@media only screen and (min-width: $medium-tablet) {
+  .left-25 {
+    float: left;
+    width: 25%;
+  }
+
+  .left-50 {
+    float: left;
+    width: 50%;
+  }
+
+  .right-50 {
+    float: right;
+    width: 50%;
+  }
+}

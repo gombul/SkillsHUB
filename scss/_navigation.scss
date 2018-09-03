@@ -1,0 +1,521 @@
+// Hide navigation for narrow displays
+.container-global-nav {
+  display: none;
+}
+
+// Main content area on authenticated pages
+.container-dashboard {
+  background-color: $gray-light;
+}
+
+
+// Narrow width styling for functional nav
+.container-functional-nav {
+  position: absolute;
+  background-color: $black;
+  top: -800px;
+  z-index: 1000;
+  width: 100%;
+  transition: all 0.5s ease;
+  box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.5);
+
+  hr {
+    display: none;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 1em;
+
+    li {
+      a {
+        color: $white;
+        padding: 0.5em 0 0.5em 1.5em;
+        display: block;
+
+        &:focus,
+        &:hover {
+          background-color: $black;
+          color: $white;
+          //border-bottom: 1px solid $white;
+        }
+      }
+    }
+  }
+}
+
+.btn-nav-toggle {
+  padding: 0.75em;
+  font-weight: bold;
+  margin: 1em 1em 0 0;
+  float: right;
+}
+
+// Small red numbered icon representing unread notifications
+a {
+  position: relative;
+
+  .pil {
+    position: absolute;
+    top: 0;
+    right: 12px;
+  }
+}
+
+// To show navigation on menu button click
+.is-active {
+  top: 84px;
+  transition: all 0.5s ease;
+}
+
+// Navigation on unauthenticated pages
+.site-nav {
+  background: $blue;
+  color: $black;
+  display: block;
+  clear: both;
+  float: none;
+  margin-bottom: 0;
+  padding: 0 0 0 1em;
+  min-height: 5px;
+  @include clearfix;
+
+  p {
+    font-weight: normal;
+    font-size: 1rem !important;
+    background-color: $yellow;
+    padding: 0.25em 0.5em;
+    margin: 0.5em 0.5em 0 0;
+
+    &.collection-name {
+      background-color: $blue;
+      color: $yellow;
+      font-weight: bold;
+    }
+
+    &.organisation-name {
+      color: $black;
+    }
+  }
+
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      text-transform: none;
+      margin: 0;
+      font-size: 0.95rem;
+
+      &.site-nav-active > a {
+        border-bottom: 4px solid $yellow;
+      }
+
+
+      a {
+        color: $white;
+        display: block;
+        border-bottom: none;
+        padding: 0.75em 1em 0.7em 1em;
+        border-bottom: 4px solid $blue;
+
+        &:hover,
+        &:focus {
+          border-bottom: 4px solid $yellow;
+          transition: 0.5s;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.header-nav-home {
+  .site-nav {
+    background: $blue;
+  }
+}
+
+@media only screen and (min-width: $medium-handheld) {
+  .site-nav {
+    p {
+      display: inline-block;
+      float: right;
+
+      &.collection-name {
+        float: left;
+      }
+
+      &.organisation-name {
+        float: right;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $medium-handheld) {
+  // Hide toggle navigation button since navigation will be displayed
+  .btn-nav-toggle {
+    display: none;
+  }
+
+  // GLOBAL NAVIGATION
+  //---------------------------------------------------------------//
+
+  .container-global-nav {
+    display: inline-block;
+    float: right;
+
+    ul {
+      list-style-type: none;
+      clear: both;
+      margin: 0 2em 0 0;
+      padding: 0 0 0 0;
+
+      li {
+        display: inline-block;
+        text-transform: none;
+        margin: 0;
+        font-size: 0.95rem;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: 50% 1.4em;
+
+        &.global-nav-active a {
+          color: $black !important;
+        }
+
+        a {
+          display: block;
+          border-bottom: none;
+          padding: 2.3em 0 0.8em 0;
+          line-height: 2.5em;
+          width: 6em;
+          color: $blue;
+
+
+          .pil {
+            top: 1.1em;
+            right: 2.1em;
+          }
+
+
+          &:hover,
+          &:focus {
+            background-color: none !important;
+            text-decoration: none;
+          }
+        }
+
+        &.nav-inbox {
+          background-image: url(../img/sprite-inbox.png);
+
+          &:hover,
+          &:focus {
+            background: tint($blue, 20%) url(../img/sprite-inbox.png) no-repeat 50% 1.4em;
+            transition: 0.5s;
+          }
+
+          &.global-nav-active {
+            background: $yellow url(../img/sprite-inbox.png) no-repeat 50% -107px;
+          }
+        }
+
+        &.nav-profile {
+          background-image: url(../img/sprite-profile.png);
+
+          &:hover,
+          &:focus {
+            background: tint($blue, 20%) url(../img/sprite-profile.png) no-repeat 50% 1.4em;
+            transition: 0.5s;
+          }
+
+          &.global-nav-active {
+            background: $yellow url(../img/sprite-profile.png) no-repeat 50% -107px;
+          }
+        }
+
+        &.nav-signing {
+          background-image: url(../img/sprite-signing.png);
+
+          &:hover,
+          &:focus {
+            background: tint($blue, 20%) url(../img/sprite-signing.png) no-repeat 50% 1.4em;
+            transition: 0.5s;
+          }
+
+          &.global-nav-active {
+            background: $yellow url(../img/sprite-signing.png) no-repeat 50% -107px;
+          }
+        }
+      }
+    }
+  }
+
+  // FUNCTIONAL LEFT NAVIGATION
+  //---------------------------------------------------------------//
+  .container-functional-nav {
+    top: 70px;
+    display: block;
+    background-color: transparent;
+    box-shadow: none;
+    transition: none;
+
+    ul {
+      margin: 2.25em 0 0.75em 0;
+      padding: 0;
+    }
+
+    ul {
+      li {
+        &.help-links {
+          border-top: 1px solid $gray-light;
+          margin: 0.6em 0 0.5em -1.75em;
+          padding: 1em 0 0.75em 0;
+          text-transform: uppercase;
+        }
+
+        a {
+          color: $gray-mid;
+          text-decoration: none;
+          padding: 0.75em 0 0.75em 3.75em;
+          font-size: 0.9rem;
+          display: block;
+          border-bottom: none;
+
+          &:focus,
+          &:hover {
+            background-color: $gray-light !important;
+            color: $black;
+          }
+
+          &.home {
+            background: transparent url(../img/nav-home.svg) no-repeat 1.5em 1px;
+            background-size: 20px 228px;
+          }
+
+          &.notifications {
+            background: transparent url(../img/nav-notifications.svg) no-repeat 1.5em 1px;
+            background-size: 20px 228px;
+          }
+
+          &.organisation {
+            background: transparent url(../img/nav-organisation.svg) no-repeat 1.5em 1px;
+            background-size: 20px 228px;
+          }
+
+          &.access {
+            background: transparent url(../img/nav-access.svg) no-repeat 1.5em 1px;
+            background-size: 20px 228px;
+          }
+
+          &.finance {
+            background: transparent url(../img/nav-finance.svg) no-repeat 1.5em 1px;
+            background-size: 20px 228px;
+          }
+
+          &.collections {
+            background: transparent url(../img/nav-collections.svg) no-repeat 1.5em 1px;
+            background-size: 20px 228px;
+          }
+
+          &.reports {
+            background: transparent url(../img/nav-reports.svg) no-repeat 1.5em 1px;
+            background-size: 20px 228px;
+          }
+
+          &.profile {
+            background: transparent url(../img/nav-profile.svg) no-repeat 1.5em 1px;
+            background-size: 20px 228px;
+          }
+
+          &.nav-active {
+            color: $black;
+            background-color: tint($yellow, 85%);
+            background-position: 1.5em -186px;
+            border-right: 4px solid $yellow;
+          }
+        }
+      }
+
+      &.collection-steps {
+        padding-left: 0;
+
+        li {
+          a {
+            padding: 0.75em 0 0.75em 2.75em;
+
+            &.step-pending {
+              background-image: url(../img/ico-step-pending.svg);
+              background-repeat: no-repeat;
+              background-position: 1em 1.05em;
+              background-size: 14px 14px;
+            }
+
+            &.step-done {
+              background-image: url(../img/ico-step-done.svg);
+              background-repeat: no-repeat;
+              background-position: 1em 1.05em;
+              background-size: 14px 14px;
+            }
+          }
+
+          ul {
+            margin: 0 0 0.5em 0;
+
+            li {
+              a {
+                font-size: 0.85rem;
+                padding: 0.6em 0 0.6em 3.1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .container-functional-nav {
+    width: 225px;
+    float: left;
+  }
+
+  .container-dashboard {
+    width: calc(100% - 225px);
+    padding: 0 3%;
+    float: right;
+  }
+
+  .application {
+    .container-functional-nav {
+      top: 110px;
+    }
+
+    .site-nav {
+      padding: 0 0 0 0.5em;
+      min-height: 50px;
+    }
+  }
+}
+
+
+.register-signin {
+  float: right;
+  padding: 1.5em 0 0.5em 0.25em;
+
+  li {
+    display: inline-block;
+  }
+
+  li:first-child {
+    margin-right: 1.25em;
+  }
+}
+// Pagination controls for long search result pages
+.search-pagination ul,
+.show-more ul {
+  margin: 0;
+  padding: 1em 0 0 0;
+}
+
+.show-more ul {
+  padding: 0;
+}
+
+.search-pagination li,
+.show-more li {
+  display: inline-block;
+  margin: 0 0.25em 2.25em 0;
+  list-style-type: none;
+}
+
+.show-more li {
+  margin: 0 0.25em 1em 0;
+}
+
+.search-pagination li a,
+.show-more li a {
+  background-color: tint($gray-mid, 85%);
+  color: $blue;
+  -webkit-border-radius: 3px;
+  border: 1px solid tint($gray-mid, 70%);
+  border-radius: 3px;
+  padding: 1em 1.25em;
+  text-decoration: none;
+}
+
+.show-more li a {
+  background: tint($gray-mid, 85%) url(../img/ico-chevron-down.svg) no-repeat 0.7em 0.95em;
+  background-size: 12px 12px;
+  padding: 0.75em 1em 0.75em 2.1em;
+  margin: 0;
+}
+
+.show-less li a {
+  background: tint($gray-mid, 85%) url(../img/ico-chevron-up.svg) no-repeat 0.7em 0.9em;
+  background-size: 12px 12px;
+}
+
+.search-pagination li a:hover,
+.search-pagination li a:active,
+.search-pagination li a:focus,
+.show-more li a:hover,
+.show-more li a:active,
+.show-more li a:focus {
+  background-color: $gray-mid;
+  border: 1px solid $gray-mid;
+  color: $white;
+}
+
+.search-pagination li.pagination-active a {
+  background-color: $white;
+  border: 1px solid $white;
+  color: $gray-mid;
+  font-weight: bold;
+}
+// Floating navigation
+.menu {
+  ul {
+    color: $gray-mid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin: 0;
+      padding: 0;
+      border-bottom: 1px solid tint($gray-mid, 50%);
+
+      &.active a {
+        background-color: tint($black, 90%);
+      }
+
+      a {
+        border-bottom: 0;
+        color: $gray-mid;
+        padding: 0.6em 0 0.6em 0.5em;
+        display: block;
+
+        &:hover,
+        &:focus {
+          background-color: tint($black, 90%);
+          color: $black;
+        }
+      }
+
+      &:first-child {
+        border-top: 1px solid tint($gray-mid, 50%);
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .is-active {
+    background: $gray-light;
+  }
+}

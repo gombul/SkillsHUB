@@ -1,0 +1,840 @@
+/**********************************
+	COMPONENTS: Layout modules that are reused on multiple pages
+
+**********************************/
+
+// Reference data beside My Schools table
+
+.container-data-table {
+  float: left;
+  width: 70%;
+}
+
+.container-reference {
+  border: 1px solid tint($yellow, 60%);
+  border-left: 6px solid tint($yellow, 60%);
+  background-color: tint($yellow, 90%);
+  padding: 2em 2.5em 0.5em 2em;
+  float: right;
+  width: 25%;
+  margin-left: 5%;
+}
+
+.centred {
+  text-align: center;
+
+  .btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1em 1.25em;
+    margin: 1.5em 0.25em 0 0.25em;
+  }
+
+  .btn-primary {
+    background-color: $yellow;
+    color: $black;
+
+    &:focus,
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}
+
+.feature-box,
+.introduction-text,
+.success,
+.selected-school,
+.introduction-block {
+  // Gray background to draw out content
+  background-color: $gray-ultralight;
+  padding: 2.5em 0 0.25em 0;
+  border-top: 1px solid $white;
+  border-bottom: 1px solid $gray-light;
+  margin-bottom: 1em;
+  margin-top: 0.4em;
+  position: relative;
+}
+
+.introduction-text,
+.success,
+.introduction-block {
+  padding: 2em 1.5em 1.25em 1.5em;
+  margin-bottom: 1em;
+}
+
+.introduction-block {
+  border: none;
+  padding: 2em 1.5em 0.25em 1.5em;
+}
+
+.selected-school {
+  background-color: $white;
+  padding: 1.5em 1.5em 0.5em 1.5em;
+  margin-bottom: 2em;
+  border-bottom: 3px solid $yellow;
+}
+
+.success {
+  background-color: white;
+  padding: 1em 1.5em 0.25em 2em;
+
+  h1 {
+    background: transparent url(../img/ico-tick-green.svg) no-repeat 0 0.3em;
+    background-size: 40px 40px;
+    font-size: 1.6rem;
+    padding: 0.5em 0 1em 52px;
+    margin: 0;
+  }
+
+  p, button {
+    margin-left: 52px;
+  }
+
+  button {
+    margin-bottom: 2em;
+  }
+}
+
+.warning {
+  background-color: white;
+  padding: 1em 1.5em 0.25em 2em;
+
+  h1 {
+    background: transparent url(../img/ico-warning-orange.svg) no-repeat 0 0.3em;
+    background-size: 40px 40px;
+    font-size: 1.6rem;
+    padding: 0.5em 0 1em 52px;
+    margin: 0;
+  }
+
+  p {
+    padding-left: 52px;
+  }
+
+  ul {
+    margin-left: 2em;
+  }
+}
+
+.feature-box {
+  padding: 0 0 0.25em 0.25em;
+}
+
+
+// Content block with yellow border separator
+
+.content-block {
+  border-top: 3px solid $yellow;
+  padding: 0.75em 0 1em 0;
+  margin-top: 1em;
+
+  h3 {
+    margin: 0.5em 0 0.25em 0;
+  }
+}
+
+
+// Container for navigation buttons at bottom of screen
+.btn-pagination {
+  border-top: 1px solid $gray-light !important;
+  clear: both;
+  @include clearfix;
+  margin: 2em 0 2em 0;
+  padding-top: 2em;
+}
+// Float right for wider displays
+@media only screen and (min-width: $small-handheld) {
+  .floated {
+    float: right;
+    margin-right: 0em;
+    margin-left: 0.25em;
+  }
+}
+// Call out box for important information
+.information-box, .message-box {
+  background: transparent url(../img/ico-info-yellow.svg) no-repeat 1.75em 2em;
+  background-size: 28px 28px;
+  border: 1px solid tint($yellow, 60%);
+  border-left: 6px solid tint($yellow, 60%);
+  background-color: tint($yellow, 90%);
+  padding: 2em 2em 1.5em 4em;
+  display: block;
+  margin-bottom: 2em;
+
+  h2,
+  h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 0;
+    clear: none;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+.message-box, .message-box-clean {
+  background: transparent url(../img/ico-info-yellow.svg) no-repeat 1em 0.95em;
+  background-size: 18px 18px;
+  background-color: tint($yellow, 90%);
+  padding: 0.75em 2em 0.75em 2.75em;
+  margin-top: 1.5em;
+  position: relative;
+  max-width: none;
+}
+
+// Message box with no icons
+.message-box-clean {
+  background: none;
+  background-color: tint($yellow, 90%);
+  padding: 0.75em 2em 0.75em 1em;
+
+  &:focus,
+  &:hover {
+    background-color: tint($yellow, 90%);
+    transition: none;
+    cursor: default;
+  }
+}
+// OL instructions used on data upload page
+.instructions {
+  li {
+    padding: 0.25em 0;
+
+    .important {
+      background: tint($yellow, 90%) url(../img/ico-info-yellow.svg) no-repeat 1em 50%;
+      background-size: 18px 18px;
+      padding: 0.75em 2em 0.75em 2.8em;
+      display: inline-block;
+      margin-top: 0.25em;
+    }
+  }
+}
+// Help icons displayed at form level
+.inline-help {
+  float: right;
+
+  a {
+    background: transparent url(../img/ico-help-gray.svg) no-repeat 0 0.25em;
+    background-size: 36px 36px;
+    width: 40px;
+    height: 42px;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: none;
+
+    &:focus,
+    &:hover {
+      background: transparent url(../img/ico-help-black.svg) no-repeat 0 0.25em;
+      background-size: 36px 36px;
+    }
+  }
+}
+// Reduced icon size within tables
+.help {
+  .inline-help {
+    a {
+      background: transparent url(../img/ico-help-gray.svg) no-repeat 50% 2px;
+      background-size: 24px 24px;
+      height: 26px;
+    }
+
+    &:focus,
+    &:hover {
+      background: transparent url(../img/ico-help-black.svg) no-repeat 50% 2px;
+      background-size: 24px 24px;
+    }
+  }
+}
+// Blue add icon
+.add {
+  background: transparent url(../img/ico-add.svg) no-repeat 0 0.2em;
+  background-size: 18px 18px;
+  padding-left: 1.7em;
+}
+
+footer {
+  @include clearfix;
+  display: block;
+  clear: both;
+  color: $black;
+  //background: tint($gray-mid, 85%);
+  border-top: 1px solid tint($gray-mid, 60%);
+  -webkit-box-shadow: inset 0 4px 15px 0 rgba(0,0,0,0.15);
+  box-shadow: inset 0 4px 15px 0 rgba(0,0,0,0.15);
+  text-align: center;
+  margin: 1.5em auto 0 auto;
+  padding: 1em 3% 1em 1em;
+
+  img {
+  background-color: white;
+    width: 275px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0.9em 0 0 0;
+  }
+
+  li {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (min-width: $medium-tablet) {
+  footer {
+    text-align: left;
+
+    img {
+      float: left;
+    }
+
+    ul {
+      float: right;
+      //margin-right: 2em;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 0.75em 1.5em 0.75em;
+
+      &:last-child {
+        margin: 0 0 1.5em 0.75em;
+      }
+    }
+  }
+}
+// Hero box for large heading and call to actions
+@media only screen and (min-width: $small-handheld) {
+  .hero-container {
+    background: transparent url(../img/bg-home.jpg) no-repeat 100% 0;
+    background-size: cover;
+    padding: 4em 0 0 0;
+  }
+
+  .hero-box {
+    background-color: rgba(255,255,255,0.8);
+    padding: 2em 5% 2em 5%;
+
+    h1 {
+      margin: 0 0 0.25em 0;
+      padding: 0 0 0.25em 0;
+      line-height: 1.2;
+      font-size: 2.2rem;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      max-width: none;
+
+      &.redeem {
+        background: transparent url(../img/ico-voucher.svg) no-repeat 0 0.3em;
+        background-size: 24px 24px;
+        padding: 0.25em 0 1em 30px;
+      }
+
+      a {
+        white-space: nowrap;
+      }
+    }
+
+    .btn {
+      vertical-align: middle;
+      font-size: 1.1rem;
+      margin: 1em 0 1em 0;
+    }
+  }
+}
+
+
+@media only screen and (min-width: $medium-tablet) {
+  .hero-box {
+    width: 55%;
+  }
+}
+// Content sections on home page
+section {
+  margin: 2em 0 1em 0;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: $medium-tablet) {
+
+  .section-calendar {
+    float: left;
+    width: 55%;
+  }
+
+  .section-news {
+    float: right;
+    width: 40%;
+    margin-left: 5%;
+    font-size: 0.9rem;
+  }
+  // News on home page, copied from DET
+  .news-block-date {
+    display: block;
+    width: 4em;
+    float: left;
+    border-right: 2px solid $yellow;
+  }
+
+  .news-block-title {
+    margin-left: 4em;
+    padding-left: 1em;
+    padding-bottom: 0.5em;
+  }
+
+  .section-news-wide {
+    margin-left: 2em;
+
+    .news-block-date {
+      width: 7em;
+    }
+
+    .news-block-title {
+      margin-left: 7em;
+      max-width: $prototype-maxwidth;
+    }
+  }
+}
+// Visually hidden
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+// Temporary messages to inform the user of a change
+.toast {
+  display: inline-block;
+  background: $white url("../img/sprite-close.svg") no-repeat right 1em;
+  background-size: 35px 250px;
+  border: 1px solid #d4d4d4;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.25);
+  font-weight: normal;
+  min-width: 250px;
+  margin: 1em 0;
+  padding: 0;
+  position: fixed;
+  right: 10px;
+  top: -7px;
+  color: $gray-mid;
+  z-index: 100;
+
+  &:focus,
+  &:hover {
+    background: $white url("../img/sprite-close.svg") no-repeat right -206px;
+    background-size: 35px 250px;
+    border: 1px solid $black;
+    box-shadow: none;
+    transition: box-shadow 0.25s ease;
+    cursor: pointer;
+    color: $black;
+  }
+
+  .toast-type {
+    border: 1px solid tint($green, 90%);
+    border-right: none;
+    display: inline-block;
+    float: left;
+    height: 47px;
+    padding: 0.4em 1em;
+    width: 30px;
+  }
+
+  .toast--success {
+    background: $green url("../img/ico-tick-white.svg") no-repeat 50% 50%;
+    background-size: 24px 24px;
+  }
+
+  .toast-content {
+    display: inline-block;
+    float: left;
+    padding: 1.1em 3em 0 1em;
+  }
+}
+// Modal windows
+.modal-window {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+
+  &:target,
+  &.modal-visible {
+    opacity: 1;
+    pointer-events: auto;
+    display: block;
+  }
+
+  & > div {
+    background: #fff;
+    position: relative;
+    margin: 0 auto;
+    padding: 2rem;
+    color: #444;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    max-height: 600px;
+
+    @media only screen and (min-width: $small-handheld) {
+      width: 80%;
+      margin: 3% auto;
+      border-radius: 0.3em;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    @media only screen and (min-width: $large-handheld) {
+      width: 40%;
+      margin: 5% auto;
+      max-width: 66em;
+    }
+
+    @media (min-width: $large-handheld) {
+      margin: 10% auto;
+      width: 500px;
+    }
+  }
+
+  h2 {
+    font-weight: 600;
+    margin-top: 0.5em;
+  }
+
+  &[aria-hidden="true"] {
+    visibility: hidden;
+  }
+}
+
+.modal-close {
+  float: right;
+  margin: -1.5em;
+  border-bottom: 0px !important;
+  max-height: 40px;
+  background-image: url("../img/ico-close-thin-black.svg");
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: 6px 5px;
+  padding: 0.5em;
+  padding-left: 2.8em;
+  padding-right: 0.7em;
+  display: block;
+
+  &:focus {
+    background-color: #fff;
+  }
+}
+
+.modal-buttons {
+  border-top: 1px solid #e2e2e2 !important;
+  clear: both;
+  margin: 2.4em 0 0 0;
+  padding-top: 1em;
+}
+
+// Coloured status buttons
+.status-buttons {
+  display: block;
+  background-color: tint($gray-mid, 85%);
+  text-align: center;
+
+  p {
+    padding: 0.25em;
+    margin: 0;
+    vertical-align: middle;
+    color: $gray-mid;
+  }
+
+  .status-button-red {
+    background-color: $red;
+
+    p {
+      color: $white;
+      font-weight: bold;
+    }
+  }
+
+  .status-button-red-none {
+    background-color: tint($red, 75%);
+
+    p {
+      color: black;
+      font-weight: normal;
+    }
+  }
+
+  .status-button-orange {
+    background-color: $yellow;
+
+    p {
+      color: black;
+      font-weight: bold;
+    }
+  }
+
+  .status-button-orange-none {
+    background-color: tint($yellow, 75%);
+    color: black;
+    font-weight: normal;
+  }
+
+  .status-button-green {
+    background-color: $green;
+
+    p {
+      color: black;
+      font-weight: bold;
+    }
+  }
+
+  .status-button-green-none {
+    background-color: tint($green, 75%);
+    color: black;
+    font-weight: normal;
+  }
+}
+
+// Animate states
+.transition-fade {
+  transition: background 2s;
+}
+
+// Status colour chip
+.status-chip {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  border-radius: 1px !important;
+  margin: 0.5em 0.35em 0.5em 0 !important;
+  vertical-align: middle;
+  background-color: $gray-ultralight;
+
+  &.chip-red {
+    background-color: $red;
+  }
+
+  &.chip-orange {
+    background-color: $orange;
+  }
+
+  &.chip-green {
+    background-color: $green;
+  }
+}
+
+
+.external-link {
+  background: url(../img/ico-external-link.svg) no-repeat right 2px;
+  padding-right: 24px;
+  background-size: 16px 16px;
+}
+
+.popup {
+  background: url(../img/ico-popup.svg) no-repeat right 2px;
+  padding-right: 24px;
+  background-size: 16px 16px;
+}
+
+.pil {
+  background: $red;
+  color: white;
+  font-size: 0.75rem;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  text-align: center;
+  line-height: 18px !important;
+  border-radius: 50%;
+  margin-left: 1px;
+
+  &.blue {
+    background: $blue;
+  }
+
+  strong {
+    font-weight: normal;
+  }
+}
+// Box for showing extra search or filtering options
+.advanced-search {
+  border: 1px solid tint($gray-mid, 80%);
+  background: $white;
+  border-radius: $prototype-border-radius;
+  padding: 1em 2em;
+  margin-top: 1em;
+  position: relative;
+
+  h2 {
+    margin: 0.5em 0 0 0;
+  }
+
+  .btn {
+    margin: 1em 0 2em 0;
+  }
+
+  input[type=text] {
+    max-width: none;
+  }
+}
+// Spacing overrides
+.no-padding-bottom {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+// Contact card in edit user
+.contact-card {
+  background: $white url(../img/ico-user.svg) no-repeat 1.2em 1.2em;
+  background-size: 45px 45px;
+  border-radius: 3px;
+  border: 2px solid tint($gray-mid, 80%);
+  padding: 1em 2em 1.25em 80px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 2em;
+
+  &.role-qualification {
+    background: $white url(../img/ico-qualification.svg) no-repeat 1.2em 1.2em;
+    background-size: 45px 45px;
+  }
+
+  &.role-card {
+    background: $white url(../img/ico-school.svg) no-repeat 1.2em 1.2em;
+    background-size: 45px 45px;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin: 0 0 0.5em 0;
+      padding: 0;
+
+      li {
+        padding: 0;
+        list-style-type: none;
+
+        ul {
+          padding: 0 0 1em 1.5em;
+
+          li {
+            font-weight: normal;
+            list-style: square;
+          }
+        }
+      }
+    }
+  }
+}
+// Buttons under cards to reduce spacing between card and related buttons
+.card-buttons {
+  margin-top: -1em;
+}
+// Pending change indicator while change request processes
+.change-pending {
+  background: $gray-light url(../img/ico-pending.svg) no-repeat 1em 50%;
+  background-size: 16px 16px;
+  font-weight: bold;
+  padding-left: 2em;
+  margin: 0;
+  max-width: 100%;
+  padding: 0.4em 0.3em 0.4em 38px;
+
+  span {
+    font-weight: normal;
+  }
+}
+// Small ticks and crosses to indicate approvals and rejections
+.status-icons {
+  padding-left: 1em;
+
+  li {
+    list-style-type: none;
+    padding: 0 0 0.4em 0;
+    margin-left: 0;
+    font-weight: normal !important;
+
+    &.status-approved {
+      background: url(../img/ico-tick-green.svg) no-repeat 0 0.25em;
+      background-size: 16px 16px;
+      padding-left: 25px;
+      margin-left: -1em;
+    }
+
+    &.status-rejected {
+      background: url(../img/ico-cross-red.svg) no-repeat 0 0.25em;
+      background-size: 16px 16px;
+      padding-left: 25px;
+      margin-left: -1em;
+    }
+
+    &.status-warning {
+      background: url(../img/validation-warning.svg) no-repeat 0 0.25em;
+      background-size: 16px 16px;
+      padding-left: 25px;
+      margin-left: -1em;
+    }
+  }
+}
+
+.status-comments {
+  padding-left: 0;
+  border: 1px solid tint($gray-mid, 80%);
+  background-color: $gray-ultralight;
+  color: $gray-mid;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  margin: 0 0 0.5em 0;
+}
+
+// Bootstrap tabs
+
+.nav-tabs {
+  .nav-item {
+    .nav-link {
+      padding-left: 55px;
+      padding-right: 30px;
+
+      &.nav-link-manual {
+        background: url(../img/ico-data-entry.svg) no-repeat 1.75em 50%;
+        background-size: 16px 16px;
+      }
+
+      &.nav-link-upload {
+        background: url(../img/ico-data-upload.svg) no-repeat 1.75em 50%;
+        background-size: 16px 16px;
+      }
+
+      &.nav-link.active {
+        -webkit-box-shadow: 0 1px 8px 1px rgba(0,0,0,.15);
+        box-shadow: 0 1px 8px 1px rgba(0,0,0,.15);
+        background-color: $white;
+      }
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+  }
+}

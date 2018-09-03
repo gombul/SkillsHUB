@@ -12,5 +12,18 @@ hgroup {
       margin-bottom: 2em;
       max-width: 220px;
     }
-  } 
+  }
+}
+.logo-skillshub {
+  width: 100%;
+  max-width: 180px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 1.5em 0 0 2em;
+}
+
+@media only screen and (min-width: $large-handheld) {
+  .logo-skillshub {
+    text-align: left;
+  }
 }

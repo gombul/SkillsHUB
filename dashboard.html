@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Dashboard - SkillsHUB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="header-nav">
+    <div class="brand">
+      <img class="logo-skillshub" src="img/logo-skillshub.svg" alt="SkillsHUB" />
+      <!--<button class="btn btn-nav-toggle" id="toggle-navigation" aria-expanded="false">Menu</button>-->
+      <div class="container-global-nav">
+        <ul id="ul-global-nav">
+          <li class="nav-inbox">
+            <a href="inbox.html">
+              Inbox
+              <span id="badgeInbox" class="pil">2</span>
+            </a>
+          </li>
+          <li class="nav-profile">
+            <a href="profile.html">Profile</a>
+          </li>
+          <li class="nav-signing">
+            <a href="index.html">Sign out</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="site-nav">
+      </div>
+    </div><!-- brand -->
+  </div><!-- header-nav -->
+
+  <div class="container-functional-nav">
+    <ul id="ul-functional-nav">
+      <li>
+        <a class="home nav-active" href="dashboard.html">Home</a>
+      </li>
+      <li>
+        <a class="reports" href="reports.html">Reports</a>
+      </li>
+      <li>
+        <a class="access" href="manage-users.html">Manage staff</a>
+      </li>
+      <li class="help-links">
+        <a href="help.html">Help and support</a>
+      </li>
+    </ul>
+  </div>
+  <div id="main-content" class="container-dashboard">
+    <div class="row">
+      <div class="col-12">
+        <p class="intro">
+          <strong>Hi Helena</strong>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <section class="widget">
+          <div class="widget-header">
+            <h2>Client search</h2>
+          </div>
+
+
+
+          <div class="widget-content">
+              <div class="grant-search">
+                  <div class="form-group">
+                    <label for="grant">Grant number</label>
+                    <input class="text-input" id="grant" type="text" value="">
+                  </div>
+                </div>
+                <div class="name-search" style="display: none">
+                  <div class="form-group">
+                    <label for="firstname">Given name</label>
+                    <input class="text-input" id="firstname" type="text" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="lastname">Family name</label>
+                    <input class="text-input" id="lastname" type="text" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="dob">Date of birth</label>
+                    <input class="text-input" id="dob" type="text" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <input class="text-input" id="gender" type="text" value="">
+                  </div>
+                </div>
+                <div class="btn-container-search-by-grant">
+                  <p><button class="btn btn-primary btn-search-by-grant">Find client</button>&nbsp;&nbsp;&nbsp;<a class="btn-name-search"
+                      href="#">Or search by name</a></p>
+                </div>
+                <div class="btn-container-search-by-name" style="display: none">
+                    <p><button class="btn btn-primary btn-search-by-name">Find client</button>&nbsp;&nbsp;&nbsp;<a class="btn-grant-search"
+                        href="#">Or search by grant</a></p>
+                  </div>
+    
+          </div>
+        </section>
+      </div>
+      <div class="col-6">
+        <section class="widget">
+          <div class="widget-header">
+            <h2>Reports</h2>
+          </div>
+          <div class="widget-content">
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <section class="widget no-padding">
+          <div class="widget-header">
+            <h2>Inbox</h2>
+          </div>
+          <div class="widget-content">
+            <table class="table-status">
+              <tr>
+                <td>
+                  <p class="status-icon status-notification unread">&nbsp;<span class="sr">Unread</span></p>
+                </td>
+                <td data-logicalname="portal_name" class="unread">
+                  <a href="">SkillsHUB will be undergoing system maintenance on Tue 3 Sept 2018</a>
+                </td>
+                <td data-logicalname="createdon">
+                  <span class="status-date">
+                    Fri, 6 July 2018
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="status-icon status-notification unread">&nbsp;<span class="sr">Unread</span></p>
+                </td>
+                <td data-logicalname="portal_name" class="unread">
+                  <a href="">Jimmy McCoy ...</a>
+                </td>
+                <td data-logicalname="createdon">
+                  <span class="status-date">
+                    Fri, 6 July 2018
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p class="status-icon status-notification read">&nbsp;<span class="sr">Read</span></p>
+                </td>
+                <td data-logicalname="portal_name" class="read">
+                  <a href="">
+                    Bri Chapman ...
+                  </a>
+                </td>
+                <td data-logicalname="createdon">
+                  <span class="status-date">
+                    Thu, 15 March 2018
+                  </span>
+                </td>
+              </tr>
+            </table>
+            <div class="buttons">
+              <button class="btn btn-small" onclick="window.location.href = '404.html'">View all messages</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- row -->
+
+
+  </div>
+  <!-- container -->
+  <footer>
+    <div class="row">
+      <div class="col-12">
+        <a href="http://www.education.gov.au/">
+          <img src="img/logo-department-black.svg" alt="Department of Education and Training logo" />
+        </a>
+        <ul>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="http://www.education.gov.au/disclaimer">Disclaimer</a></li>
+          <li><a href="http://www.education.gov.au/copyright">Copyright</a></li>
+          <li><a href="https://www.education.gov.au/privacy-policy">Privacy</a></li>
+          <li><a href="https://www.education.gov.au/terms-use-departments-website">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src='js/jquery-3.3.1.min.js'></script>
+  <script>
+    // Search for client options
+    $(".btn-name-search").click(function () {
+      $(".grant-search").hide();
+      $(".name-search").show();
+      $(".btn-container-search-by-grant").hide();
+      $(".btn-container-search-by-name").show();
+    });
+    $(".btn-grant-search").click(function () {
+      $(".name-search").hide();
+      $(".grant-search").show();
+      $(".btn-container-search-by-name").hide();
+      $(".btn-container-search-by-grant").show();
+    });
+  </script>
+
+</body>
+
+</html>

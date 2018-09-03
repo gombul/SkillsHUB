@@ -29,7 +29,7 @@
 					<div class="form-group">
 						<input class="form-control" id="Password" name="Password" placeholder="Password" type="password">
 					</div>
-					<button type="submit" class="btn btn-block btn-lg btn-primary">Sign in</button>
+					<button type="submit" class="btn btn-block btn-lg btn-primary btnSignIn">Sign in</button>
 					<p class="forgot">
 						<a href="/Account/PasswordForgot">
 							Forgot your password?
@@ -41,12 +41,19 @@
 				<div class="hero">
 					<div class="container-intro">
 						<h2>Prototype</h2>
-						<p>For managing eligibility and enrollments for adult migrants learning english.</p>
+						<p>For managing eligibility and enrolments for adult migrants learning english.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script src='js/jquery-3.3.1.min.js'></script>
+	<script>
+		// Sign in
+		$('.btnSignIn').click(function () {
+			window.location.href = 'dashboard.html';
+		});
+	</script>
 </body>
 
 </html>
