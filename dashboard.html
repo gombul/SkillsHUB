@@ -99,7 +99,7 @@
                   <label class="off narrow label-right" for="x"><input id="x" type="radio" name="toggle-buttons"><span>X</span></label>
                 </div>
               </div>
-              <button class="btn btn-primary btn-small">Search</button>
+              <button class="btn btn-primary btn-small btn-search-name">Search</button>
             </div>
 
 
@@ -207,11 +207,11 @@
     </div>
   </footer>
   <script src='js/jquery-3.3.1.min.js'></script>
-  <script src='js/simple-donut-jquery.js'></script>
+  <script src='js/common-functions.js'></script>
   <script>
-    var circle1 = new circleDonutChart('example1');
-    var circle2 = new circleDonutChart('example2');
-    circle1.draw({ end: 75, start: 0, maxValue: 100, titlePosition: "outer-top", titleText: "", outerCircleColor: '#007DF9', innerCircleColor: '#e2e2e2', size: "26" });
+    $(".btn-search").click(function() {
+      window.location.href = 'eva.html';
+    });
   </script>
 
 </body>
