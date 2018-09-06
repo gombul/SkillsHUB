@@ -17,49 +17,12 @@
 
   h2 {
     font-size: 1.3rem;
-    padding: 0.5em 0 0.75em 0;
+    padding: 0.5em 0 0.25em 0;
     margin: 0;
-
-    strong {
-      font-weight: normal;
-    }
-
-    span {
-      font-size: 0.9rem;
-      margin-left: 0.25em;
-      background-color: $gray-light;
-      border-radius: 3px;
-      padding: 0.2em 0.6em;
-      white-space: nowrap;
-    }
-
-    &.important {
-      background: transparent url(../img/ico-info-yellow.svg) no-repeat 0 0.6em;
-      background-size: 22px 22px;
-      padding-left: 1.5em;
-    }
   }
 
   p {
     font-size: 0.9rem;
-  }
-
-  .btn {
-    padding: 1em 1.25em;
-    margin-right: 0.25em;
-  }
-
-  .btn-primary {
-    font-weight: normal;
-  }
-
-  .btn-small {
-    font-size: 0.85rem;
-    padding: 0.6em 0.8em;
-  }
-
-  .footer-buttons {
-    margin: 1em 0;
   }
 
   .widget-header {
@@ -74,7 +37,7 @@
     font-size: 0.9rem;
 
     .btn {
-      margin: 0 0 1em 0;
+      margin: 0;
     }
   }
 
@@ -125,65 +88,22 @@ table.table-status {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-top: 1px solid $gray-light;
-
-  th {
-    background-color: white;
-    font-weight: 500;
-  }
-
-  td,
-  th {
-    padding: 0.6em 0.5em 0.65em 0.75em;
-    vertical-align: middle;
-
-    .btn-primary {
-      display: block;
-      margin: 1em 0;
+  td {
+    &.message {
+      background: transparent url(../img/ico-unread.svg) no-repeat 0 50%;
+      background-size: 16px 16px;
+      width: 75%;
+      padding-left: 2em;
+      font-weight: bold;
+    }
+    &.date {
+      width: 25%;
+      text-align: right;
+      white-space: nowrap;
     }
   }
-
-  td:first-child {
-    width: 20px;
-  }
-
-  p {
-    margin: 0;
-    max-width: 100%;
-  }
-
-  .status-notification {
-    background: transparent url(../img/nav-notifications.svg) no-repeat 1.2em 0;
-    background-size: 20px 222px;
-    padding: 0.25em 0 0.25em 30px;
-  }
-
-  .unread {
-    font-weight: bold;
-    background-position: 1.2em -189px;
-  }
 }
 
-
-// Other icons
-
-.xls {
-  background: transparent url(../img/ico-xls.svg) no-repeat 0 0;
-  background-size: 28px 28px;
-  height: 30px;
-  display: inline-block;
-  border-bottom: none;
-  padding-left: 32px;
-}
-
-.pdf {
-  background: transparent url(../img/ico-pdf.svg) no-repeat 0 0;
-  background-size: 28px 28px;
-  height: 30px;
-  display: inline-block;
-  border-bottom: none;
-  padding-left: 32px;
-  margin-right: 1em;
-}
 
 @media only screen and (min-width: $medium-handheld) {
   .widget {

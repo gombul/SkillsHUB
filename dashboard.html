@@ -11,29 +11,25 @@
 
 <body>
   <div class="header-nav">
-    <div class="brand">
-      <img class="logo-skillshub" src="img/logo-skillshub.svg" alt="SkillsHUB" />
-      <!--<button class="btn btn-nav-toggle" id="toggle-navigation" aria-expanded="false">Menu</button>-->
-      <div class="container-global-nav">
-        <ul id="ul-global-nav">
-          <li class="nav-inbox">
-            <a href="inbox.html">
-              Inbox
-              <span id="badgeInbox" class="pil">2</span>
-            </a>
-          </li>
-          <li class="nav-profile">
-            <a href="profile.html">Profile</a>
-          </li>
-          <li class="nav-signing">
-            <a href="index.html">Sign out</a>
-          </li>
-        </ul>
-      </div>
+    <img class="logo-skillshub" src="img/logo-skillshub-white.svg" alt="SkillsHUB" />
+    <!--<button class="btn btn-nav-toggle" id="toggle-navigation" aria-expanded="false">Menu</button>-->
+    <div class="container-global-nav">
+      <ul id="ul-global-nav">
+        <li class="nav-inbox">
+          <a href="inbox.html">
+            Inbox
+            <span id="badgeInbox" class="pil">2</span>
+          </a>
+        </li>
+        <li class="nav-profile">
+          <a href="profile.html">Profile</a>
+        </li>
+        <li class="nav-signing">
+          <a href="index.html">Sign out</a>
+        </li>
+      </ul>
+    </div>
 
-      <div class="site-nav">
-      </div>
-    </div><!-- brand -->
   </div><!-- header-nav -->
 
   <div class="container-functional-nav">
@@ -45,6 +41,12 @@
         <a class="reports" href="reports.html">Reports</a>
       </li>
       <li>
+        <a class="calendar" href="bookings.html">Bookings</a>
+      </li>
+      <li>
+        <a class="phone" href="sms.html">Send SMS</a>
+      </li>
+      <li>
         <a class="access" href="manage-users.html">Manage staff</a>
       </li>
       <li class="help-links">
@@ -54,128 +56,137 @@
   </div>
   <div id="main-content" class="container-dashboard">
     <div class="row">
-      <div class="col-md-12">
-        <p class="intro">
-          <strong>Hi Helena</strong>
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
+      <div class="col-lg-5">
         <section class="widget">
           <div class="widget-header">
             <h2>Client search</h2>
           </div>
-
-
-
           <div class="widget-content">
-              <div class="grant-search">
-                  <div class="form-group">
-                    <label for="grant">Grant number</label>
-                    <input class="text-input" id="grant" type="text" value="">
-                  </div>
+            <div class="grant-search clearfix highlight">
+
+              <div class="form-group clearfix">
+                <label for="grant">Visa Grant Number</label>
+                <input class="text-input text-input-with-button float-left" id="grant" type="text" value="" autofocus><button
+                  class="btn btn-primary float-right btn-search"><span class="sr-only">Search</span></button>
+              </div>
+            </div>
+            <p class="or"><span>Or</span></p>
+            <div class="name-search tighter-fields">
+              <div class="form-group">
+                <label for="other">Passport or ImmiCard Number <span class="display-block hint">(all fields required)</span></label>
+                <input class="text-input" id="other" type="text" value="">
+              </div>
+              <div class="form-group">
+                <label for="firstname">Given name</label>
+                <input class="text-input" id="firstname" type="text" value="">
+              </div>
+              <div class="form-group">
+                <label for="lastname">Family name</label>
+                <input class="text-input" id="lastname" type="text" value="">
+              </div>
+              <div class="form-group">
+                <label class="uikit-text-input__label" for="date">Date of birth <span class="hint">(DD / MM / YYYY)</span></label>
+                <input class="uikit-text-input dd" type="text" name="dd-date" id="dd-date" maxlength="2" required aria-required="true" aria-label="2 digit day">                /
+                <input class="uikit-text-input mm" type="text" name="mm-date" id="mm-date" maxlength="2" required aria-required="true" aria-label="2 digit month">                /
+                <input class="uikit-text-input yyyy" type="text" name="yyyy-date" id="yyyy-date" maxlength="4" required aria-required="true"
+                  aria-label="4 digit year">
+              </div>
+              <div class="form-group">
+                <label for="toggle-buttons">Gender</label>
+                <div class="radio-toggle clearfix">
+                  <label class="on narrow label-left" for="male"><input id="male" type="radio" name="toggle-buttons"><span>Male</span></label>
+                  <label class="off narrow label-middle" for="female"><input id="female" type="radio" name="toggle-buttons"><span>Female</span></label>
+                  <label class="off narrow label-right" for="x"><input id="x" type="radio" name="toggle-buttons"><span>X</span></label>
                 </div>
-                <div class="name-search" style="display: none">
-                  <div class="form-group">
-                    <label for="firstname">Given name</label>
-                    <input class="text-input" id="firstname" type="text" value="">
-                  </div>
-                  <div class="form-group">
-                    <label for="lastname">Family name</label>
-                    <input class="text-input" id="lastname" type="text" value="">
-                  </div>
-                  <div class="form-group">
-                    <label for="dob">Date of birth</label>
-                    <input class="text-input" id="dob" type="text" value="">
-                  </div>
-                  <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <input class="text-input" id="gender" type="text" value="">
-                  </div>
-                </div>
-                <div class="btn-container-search-by-grant">
-                  <p><button class="btn btn-primary btn-search-by-grant">Find client</button>&nbsp;&nbsp;&nbsp;<a class="btn-name-search"
-                      href="#">Or search by name</a></p>
-                </div>
-                <div class="btn-container-search-by-name" style="display: none">
-                    <p><button class="btn btn-primary btn-search-by-name">Find client</button>&nbsp;&nbsp;&nbsp;<a class="btn-grant-search"
-                        href="#">Or search by grant</a></p>
-                  </div>
-    
+              </div>
+              <button class="btn btn-primary btn-small">Search</button>
+            </div>
+
+
           </div>
         </section>
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-7">
         <section class="widget">
           <div class="widget-header">
-            <h2>Reports</h2>
+            <h2>Thursday, 6 September 2018</h2>
           </div>
           <div class="widget-content">
+            <h3 class="chart-heading">Students enrolled <span>539</span></h3>
+            <div class="row chart-container">
+              <div class="col-sm-4 chart-item">
+                <img class="svg" src="img/chart-25pc.svg" alt="Enrolments" />
+                <p><strong>&#62; 50hrs total</strong> <br /><a href="#">tuition remaining</a></p>
+              </div>
+              <div class="col-sm-4 chart-item">
+                <img class="svg" src="img/chart-39pc.svg" alt="Enrolments" />
+                <p><strong>&#62; 50hrs until</strong> <br /><a href="#">next assessment</a></p>
+              </div>
+              <div class="col-sm-4 chart-item">
+                <img class="svg" src="img/chart-13pc.svg" alt="Enrolments" />
+                <p><strong>&#62; 50hrs until</strong> <br /><a href="#">entitlement ends</a></p>
+              </div>
+            </div>
 
-          </div>
-        </section>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-12">
-        <section class="widget no-padding">
-          <div class="widget-header">
-            <h2>Inbox</h2>
-          </div>
-          <div class="widget-content">
-            <table class="table-status">
-              <tr>
-                <td>
-                  <p class="status-icon status-notification unread">&nbsp;<span class="sr">Unread</span></p>
-                </td>
-                <td data-logicalname="portal_name" class="unread">
-                  <a href="">SkillsHUB will be undergoing system maintenance on Tue 3 Sept 2018</a>
-                </td>
-                <td data-logicalname="createdon">
-                  <span class="status-date">
-                    Fri, 6 July 2018
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p class="status-icon status-notification unread">&nbsp;<span class="sr">Unread</span></p>
-                </td>
-                <td data-logicalname="portal_name" class="unread">
-                  <a href="">Jimmy McCoy ...</a>
-                </td>
-                <td data-logicalname="createdon">
-                  <span class="status-date">
-                    Fri, 6 July 2018
-                  </span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <p class="status-icon status-notification read">&nbsp;<span class="sr">Read</span></p>
-                </td>
-                <td data-logicalname="portal_name" class="read">
-                  <a href="">
-                    Bri Chapman ...
-                  </a>
-                </td>
-                <td data-logicalname="createdon">
-                  <span class="status-date">
-                    Thu, 15 March 2018
-                  </span>
-                </td>
-              </tr>
-            </table>
-            <div class="buttons">
-              <button class="btn btn-small" onclick="window.location.href = '404.html'">View all messages</button>
+            <h3 class="chart-heading">Pre-tuition <span>52</span></h3>
+            <div class="row chart-container">
+              <div class="col-sm-4 chart-item">
+                <img class="svg" src="img/chart-29.svg" alt="Pre-tuition" />
+                <p><strong>Booked for</strong> <br /><a href="#">initial assessment</a></p>
+              </div>
+              <div class="col-sm-4 chart-item">
+                <img class="svg" src="img/chart-23.svg" alt="Pre-tuition" />
+                <p><strong>Waiting for</strong> <br /><a href="#">class placement</a></p>
+              </div>
+              <div class="col-sm-4 chart-item">
+                <img class="svg" src="img/chart-reports.svg" alt="Pre-tuition" />
+                <p><strong><a href="#">More<br /> reports</a></strong></p>
+              </div>
             </div>
           </div>
         </section>
+
+        <div class="row">
+          <div class="col-12">
+            <section class="widget">
+              <div class="widget-header">
+                <h2>Unread messages</h2>
+              </div>
+              <div class="widget-content">
+                <table class="table-status">
+                  <tr>
+                    <td class="message">
+                      <a href="">Message text</a>
+                    </td>
+                    <td>
+                      <span class="date">
+                        6 Sep 2018
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="message">
+                      <a href="">Message text</a>
+                    </td>
+                    <td>
+                      <span class="date">
+                        6 Sep 2018
+                      </span>
+                    </td>
+                  </tr>
+                </table>
+                <div class="buttons">
+                  <button class="btn btn-small" onclick="window.location.href = '404.html'">Inbox</button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- row -->
+
       </div>
     </div>
-    <!-- row -->
+
 
 
   </div>
@@ -187,8 +198,6 @@
           <img src="img/logo-department-black.svg" alt="Department of Education and Training logo" />
         </a>
         <ul>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
           <li><a href="http://www.education.gov.au/disclaimer">Disclaimer</a></li>
           <li><a href="http://www.education.gov.au/copyright">Copyright</a></li>
           <li><a href="https://www.education.gov.au/privacy-policy">Privacy</a></li>
@@ -198,20 +207,11 @@
     </div>
   </footer>
   <script src='js/jquery-3.3.1.min.js'></script>
+  <script src='js/simple-donut-jquery.js'></script>
   <script>
-    // Search for client options
-    $(".btn-name-search").click(function () {
-      $(".grant-search").hide();
-      $(".name-search").show();
-      $(".btn-container-search-by-grant").hide();
-      $(".btn-container-search-by-name").show();
-    });
-    $(".btn-grant-search").click(function () {
-      $(".name-search").hide();
-      $(".grant-search").show();
-      $(".btn-container-search-by-name").hide();
-      $(".btn-container-search-by-grant").show();
-    });
+    var circle1 = new circleDonutChart('example1');
+    var circle2 = new circleDonutChart('example2');
+    circle1.draw({ end: 75, start: 0, maxValue: 100, titlePosition: "outer-top", titleText: "", outerCircleColor: '#007DF9', innerCircleColor: '#e2e2e2', size: "26" });
   </script>
 
 </body>

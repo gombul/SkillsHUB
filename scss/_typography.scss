@@ -9,9 +9,9 @@ body {
   margin: 0;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  line-height: $prototype-leading;
-  font-family: $prototype-font-body;
-  color: $prototype-text-colour;
+  line-height: $leading;
+  font-family: $font-body;
+  color: $text-colour;
 }
 
 a {
@@ -28,7 +28,7 @@ a {
 }
 
 p {
-  max-width: $prototype-maxwidth;
+  max-width: $maxwidth;
   margin: 0 0 $margin-bottom-default 0;
   &.intro,
   &.breadcrumbs {
@@ -55,7 +55,7 @@ code {
 }
 
 li {
-  max-width: $prototype-maxwidth;
+  max-width: $maxwidth;
 }
 
 

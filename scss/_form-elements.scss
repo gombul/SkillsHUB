@@ -13,7 +13,7 @@
   font-size: 1rem;
   text-decoration: none;
   border: 1px solid $blue;
-  border-radius: $prototype-border-radius;
+  border-radius: $border-radius;
   background-color: $white;
   padding: 0.8em 0.6em;
   cursor: pointer;
@@ -99,16 +99,6 @@
   padding: 0.6em 0.75em;
 }
 
-// Copy text function for warning textarea boxes
-.copy-text {
-  height: 18px;
-  display: inline-block;
-  font-size: 0.9rem;
-  padding: 0 0 0 30px;
-  background: transparent url(../img/ico-copy.svg) no-repeat 5px 0;
-  background-size: 18px 18px;
-  text-decoration: none;
-}
 
 // Text inputs
 
@@ -120,6 +110,7 @@ label {
     margin-top: 0.5em;
   }
 }
+
 
 // Controls whether label hints are inline or broken
 
@@ -199,6 +190,34 @@ select {
   }
 }
 
+// Use this class to condense the space used for form fields
+.tighter-fields {
+  input[type=text] {
+    margin: 0.2em 1em 0.2em 0;
+    padding: 0.4em 0.4em;
+  }  
+}
+
+
+// Search field with search button beside it
+
+.text-input-with-button {
+  display: inline-block;
+  vertical-align: baseline;
+  @include float-left;
+  width: 80% !important;
+  margin: 0 !important;
+}
+.btn-search {
+  width: 50px;
+  background: $blue url(../img/ico-search.svg) no-repeat 50% 50%;
+  background-size: 22px 22px;
+  height: 2.75em;
+  width: 17%;
+  @include float-right;
+  margin: 0 !important;
+}
+
 textarea {
   margin: 0 0.5em 0 0;
 }
@@ -211,6 +230,7 @@ label {
 
 .hint {
   font-weight: normal;
+  color: $gray-mid;
 }
 
 
@@ -253,7 +273,7 @@ caption {
   line-height: 1.4em;
   font-size: 1rem;
   font-weight: bold;
-  max-width: $prototype-maxwidth;
+  max-width: $maxwidth;
 
   &.large {
     font-size: 1.4rem;
@@ -330,6 +350,9 @@ caption {
     border: 1px solid #D0D0D0;
     overflow: visible;
     font-weight: normal;
+    &.narrow {
+      width: 80px;
+    }
 
     &.label-left, &.label-left span {
       border-radius: 4px 0 0 4px;

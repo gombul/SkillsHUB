@@ -17,18 +17,16 @@
 	font-style: normal;
 }
 
-$prototype-font-heading: 'news_gothic_bt-webfont', 'Helvetica', 'Arial', sans-serif;
-$prototype-font-body: 'news_gothic_bt-webfont', 'Helvetica', 'Arial', sans-serif;
-$prototype-text-colour: #444;
-$prototype-leading: 1.6;
-$prototype-grid-12-columns: 12t;
-$prototype-grid-12-gutter-width: 24px;
+$font-heading: 'news_gothic_bt-webfont', 'Helvetica', 'Arial', sans-serif;
+$font-body: 'news_gothic_bt-webfont', 'Helvetica', 'Arial', sans-serif;
+$text-colour: #444;
+$leading: 1.6;
 
 // Margins, padding and corners
 
 $margin-bottom-default: 1em;
-$prototype-maxwidth: 60em;
-$prototype-border-radius: 4px;
+$maxwidth: 60em;
+$border-radius: 4px;
 
 // Breakpoints
 
@@ -41,6 +39,7 @@ $max-width: 1400px;
 // Brand colours
 
 $blue: #3B53A4;
+$blue-dark: #051559;
 $yellow: #E9A913;
 $purple: #522760;
 
@@ -65,4 +64,13 @@ $black: #252525;
     display: table;
     clear: both;
   }
+}
+
+// Slightly lighten a color
+// @param {Color} $color - color to tint
+// @param {Number} $percentage - percentage of `$color` in returned color
+// @return {Color}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
 }
