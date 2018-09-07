@@ -31,8 +31,22 @@ table {
   td {
     border-bottom: 1px solid $gray-light;
     background-color: white;
-
   }
-
 }
 
+.read-only {
+  background-color: $gray-light;
+  padding: 0.5em 1em;
+  table {
+    margin-top: 0.75em;
+  }
+  th, td {
+    border-bottom: 1px solid tint($gray-mid, 85%);
+    background-color: $white;
+    font-weight: normal;
+    font-size: 0.85rem;
+  }
+  th {
+    background-color: $gray-ultralight;
+  }
+}
