@@ -20,7 +20,10 @@ body.unauthenticated {
 }
 
 .container-intro {
-  padding: 13vh 25vw 5vh 8vw;
+  background-color: rgba(0,0,0,0.5);
+  margin: 10vh 20vw 5vh 6vw;
+  border-radius: 4px;
+  padding: 2em 4em;
   color: white;
   h2 {
     text-transform: uppercase;
