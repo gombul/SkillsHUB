@@ -11,7 +11,7 @@
   border-radius: 4px 4px 4px 4px;
   -webkit-box-shadow: 0 4px 8px 1px rgba(0,0,0,.15);
   box-shadow: 0 4px 8px 1px rgba(0,0,0,.15);
-  margin: 0 0 1em 0;
+  margin: 0 0 0.5em 0;
   padding-bottom: 0.5em;
   position: relative;
 
@@ -39,6 +39,10 @@
     .btn {
       margin: 0;
     }
+  }
+
+  &.widget-last {
+    margin-bottom: 3em;
   }
 
   .status-date {
@@ -107,6 +111,6 @@ table.table-status {
 
 @media only screen and (min-width: $medium-handheld) {
   .widget {
-    margin: 0 0 2em 0;
+    margin: 0 0 1em 0;
   }
 }

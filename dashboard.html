@@ -86,10 +86,12 @@
               </div>
               <div class="form-group">
                 <label class="uikit-text-input__label" for="date">Date of birth <span class="hint">(DD / MM / YYYY)</span></label>
-                <input class="uikit-text-input dd" type="text" name="dd-date" id="dd-date" maxlength="2" required aria-required="true" aria-label="2 digit day">                /
-                <input class="uikit-text-input mm" type="text" name="mm-date" id="mm-date" maxlength="2" required aria-required="true" aria-label="2 digit month">                /
-                <input class="uikit-text-input yyyy" type="text" name="yyyy-date" id="yyyy-date" maxlength="4" required aria-required="true"
-                  aria-label="4 digit year">
+                <input class="uikit-text-input dd" type="text" name="dd-date" id="dd-date" maxlength="2" required
+                  aria-required="true" aria-label="2 digit day"> /
+                <input class="uikit-text-input mm" type="text" name="mm-date" id="mm-date" maxlength="2" required
+                  aria-required="true" aria-label="2 digit month"> /
+                <input class="uikit-text-input yyyy" type="text" name="yyyy-date" id="yyyy-date" maxlength="4" required
+                  aria-required="true" aria-label="4 digit year">
               </div>
               <div class="form-group">
                 <label for="toggle-buttons">Gender</label>
@@ -139,54 +141,65 @@
                 <p><strong>Waiting for</strong> <br /><a href="#">class placement</a></p>
               </div>
               <div class="col-sm-4 chart-item">
-                <img class="svg" src="img/chart-reports.svg" alt="Pre-tuition" />
-                <p><strong><a href="#">More<br />  reports</a></strong></p>
+                <img class="svg" src="img/chart-reports.svg" alt="Classes" />
+                <p><strong>Classes and</strong> <br /><a href="#">scheduled attendance</a></p>
               </div>
+            </div>
+            <hr />
+            <div class="form-group clearfix">
+              <label for="reporting-range">Change reporting range</label>
+              <select class="text-input text-input-with-button float-left" id="reporting-range" type="text" value="">
+                <option selected>-- 6 September 2018 --</option>
+                <option>...</option>
+                <option>...</option>
+                <option>...</option>
+                <option>...</option>
+                <option>...</option>
+                <option>...</option>
+              </select>&nbsp;&nbsp;<button class="btn btn-small">Show</button>
             </div>
           </div>
         </section>
 
-        <div class="row">
-          <div class="col-12">
-            <section class="widget">
-              <div class="widget-header">
-                <h2>Unread messages</h2>
-              </div>
-              <div class="widget-content">
-                <table class="table-status">
-                  <tr>
-                    <td class="message">
-                      <a href="">Message text</a>
-                    </td>
-                    <td>
-                      <span class="date">
-                        6 Sep 2018
-                      </span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="message">
-                      <a href="">Message text</a>
-                    </td>
-                    <td>
-                      <span class="date">
-                        6 Sep 2018
-                      </span>
-                    </td>
-                  </tr>
-                </table>
-                <div class="buttons">
-                  <button class="btn btn-small" onclick="window.location.href = '404.html'">Inbox</button>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-        <!-- row -->
-
       </div>
     </div>
-
+    <div class="row">
+      <div class="col-12">
+        <section class="widget widget-last">
+          <div class="widget-header">
+            <h2>Unread messages</h2>
+          </div>
+          <div class="widget-content">
+            <table class="table-status">
+              <tr>
+                <td class="message">
+                  <a href="">Message text</a>
+                </td>
+                <td>
+                  <span class="date">
+                    6 Sep 2018
+                  </span>
+                </td>
+              </tr>
+              <tr>
+                <td class="message">
+                  <a href="">Message text</a>
+                </td>
+                <td>
+                  <span class="date">
+                    6 Sep 2018
+                  </span>
+                </td>
+              </tr>
+            </table>
+            <div class="buttons">
+              <button class="btn btn-small" onclick="window.location.href = '404.html'">Inbox</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- row -->
 
 
   </div>
@@ -209,7 +222,7 @@
   <script src='js/jquery-3.3.1.min.js'></script>
   <script src='js/common-functions.js'></script>
   <script>
-    $(".btn-search").click(function() {
+    $(".btn-search").click(function () {
       window.location.href = 'eva.html';
     });
   </script>
