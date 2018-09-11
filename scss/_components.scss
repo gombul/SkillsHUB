@@ -10,7 +10,8 @@
   clear: both;
   @include clearfix;
   margin: 0 0 2em 1em;
-  padding: 0;
+  padding: 2em 0 0 0;
+  border-top: 1px solid $gray-light;
 }
 
 
@@ -139,7 +140,7 @@
   }
   img {
     max-width: 150px;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
   }
 }
 
@@ -152,8 +153,11 @@
     padding: 0.1em 0 1em 1.75em;
   }
   &.message-success {
-    background: white url(../img/ico-tick-green.svg) no-repeat 0 0;
+    background: tint($green, 90%) url(../img/ico-tick-green.svg) no-repeat 1.5em 1.5em;
     background-size: 32px 32px;
+    border-radius: 4px;
+    border: 1px solid tint($green, 50%);
+    padding: 1.5em 1em 0.5em 1.5em;
   }
 }
 

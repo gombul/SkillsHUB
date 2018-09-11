@@ -41,10 +41,10 @@
         <a class="reports" href="reports.html">Reports</a>
       </li>
       <li>
-        <a class="calendar" href="bookings.html">Bookings</a>
+        <a class="calendar" href="bookings.html">Calendar</a>
       </li>
       <li>
-        <a class="phone" href="sms.html">Send SMS</a>
+        <a class="checklist" href="attendance.html">Attendance</a>
       </li>
       <li>
         <a class="access" href="manage-users.html">Manage staff</a>
@@ -63,50 +63,73 @@
           </div>
           <div class="widget-content">
             <div class="row">
-              <div class="col-lg-7">
+              <div class="col-lg-8">
                 <div class="contact-card">
                   <div class="row">
                     <div class="col-lg-4">
                       <img src="img/avatar-eva.svg" alt="Avatar" />
-                      <p><button class="btn btn-small">Edit profile</button></p>
+                      <p><button class="btn btn-primary btn-register">Register client</button></p>
                     </div>
                     <div class="col-lg-8">
-                        <div class="read-only">
-                            <table>
-                        <tr>
-                          <th>Visa Grant Number</th>
-                          <td>1234567891234</td>
-                        </tr>
-                        <tr>
-                          <th>Date of birth</th>
-                          <td>10 Apr 1992</td>
-                        </tr>
-                        <tr>
-                          <th>Gender</th>
-                          <td>Female</td>
-                        </tr>
-                        <tr>
-                          <th>Country of birth</th>
-                          <td>Afghanistan</td>
-                        </tr>
-                        <tr>
-                          <th>Language</th>
-                          <td>Dari</td>
-                        </tr>
-                      </table>
-                      </div>  
+                      <div class="message message-success">
+                        <h2>Eligible</h2>
+                        <p>This client is eligible for assessment</p>
+                      </div>
+                      <div class="row chart-container">
+                        <div class="col-sm-4 chart-item">
+                          <p><strong class="count">89</strong> <br />days remaining to enrol<br />
+                          <em>22 Feb 2019</em></p>
+                        </div>
+                        <div class="col-sm-4 chart-item">
+                          <p><strong class="count">65</strong> <br />days remaining for registration<br />
+                            <em>19 Jan 2019</em></p>
+                        </div>
+                        <div class="col-sm-4 chart-item">
+                          <p><strong class="count">112</strong> <br />days to entitlement end<br />
+                            <em>02 Mar 2019</em></p>
+                        </div>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-lg-5">
-                <div class="eligibility">
-                  <div class="message message-success">
-                    <h2>Eligible</h2>
-                    <p>This client is eligible for AMEP assessment.</p>
-                    <button class="btn btn-primary btn-register">Register client</button>
-                  </div>
-
+              <div class="col-lg-4">
+                <div class="read-only">
+                  <table>
+                    <tr>
+                      <th>Visa Grant Number</th>
+                      <td>1234567891234</td>
+                    </tr>
+                    <tr>
+                      <th>Initial grant date</th>
+                      <td>22 July 2018</td>
+                    </tr>
+                    <tr>
+                      <th>Initial arrival date</th>
+                      <td>22 July 2018</td>
+                    </tr>
+                    <tr>
+                      <th>Date of birth</th>
+                      <td>10 Apr 1992</td>
+                    </tr>
+                    <tr>
+                      <th>Gender</th>
+                      <td>Female</td>
+                    </tr>
+                    <tr>
+                      <th>Country of birth</th>
+                      <td>Afghanistan</td>
+                    </tr>
+                    <tr>
+                      <th>Language</th>
+                      <td>Dari</td>
+                    </tr>
+                    <tr>
+                      <th>Principal applicant</th>
+                      <td>Yes</td>
+                    </tr>
+                  </table>
                 </div>
               </div>
             </div>
@@ -142,6 +165,24 @@
     $(".btn-register").click(function () {
       window.location.href = 'register.html';
     });
+
+      // Number animate count from zero
+  $(".count").each(function() {
+    $(this)
+      .prop("Counter", 0)
+      .animate(
+        {
+          Counter: $(this).text()
+        },
+        {
+          duration: 2000,
+          easing: "swing",
+          step: function(now) {
+            $(this).text(Math.ceil(now));
+          }
+        }
+      );
+  });
   </script>
 
 </body>

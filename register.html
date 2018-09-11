@@ -41,10 +41,10 @@
         <a class="reports" href="reports.html">Reports</a>
       </li>
       <li>
-        <a class="calendar" href="bookings.html">Bookings</a>
+        <a class="calendar" href="bookings.html">Calendar</a>
       </li>
       <li>
-        <a class="phone" href="sms.html">Send SMS</a>
+        <a class="checklist" href="attendance.html">Attendance</a>
       </li>
       <li>
         <a class="access" href="manage-users.html">Manage staff</a>
@@ -55,6 +55,25 @@
     </ul>
   </div>
   <div id="main-content" class="container-dashboard">
+    <ul class="progress-indicator">
+      <!-- use completed or active -->
+      <li class="active">
+        <span class="bubble"></span>
+        Register
+      </li>
+      <li>
+        <span class="bubble"></span>
+        Assessment
+      </li>
+      <li>
+        <span class="bubble"></span>
+        Interview
+      </li>
+      <li>
+        <span class="bubble"></span>
+        Enrolment
+      </li>
+    </ul>
     <div class="row">
       <div class="col-lg-12">
         <section class="widget">
@@ -75,7 +94,8 @@
                     <input class="text-input" id="lastname" type="text" value="Durrani">
                   </div>
                   <div class="form-group">
-                    <label for="lastname">Home language <span class="hint display-block">Start typing or select from the list</span></label>
+                    <label for="lastname">Home language <span class="hint display-block">Start typing or select from
+                        the list</span></label>
                     <select class="text-input" id="lastname" type="text" value="">
                       <option selected>Dari</option>
                       <option>Aceh</option>
@@ -91,16 +111,34 @@
                       <option>Assyrian</option>
                     </select>
                   </div>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Interpreter required?</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="interpreter-yes"><input id="interpreter-yes" type="radio" name="toggle-buttons"><span>Yes</span></label>
+                      <label class="off label-right" for="interpreter-no"><input id="interpreter-no" type="radio" name="toggle-buttons"><span>No</span></label>
+                    </div>
+                  </div>
                 </fieldset>
                 <fieldset>
                   <legend>Contact details</legend>
                   <div class="form-group">
-                    <label for="phone">Phone number <span class="hint">(required)</span></label>
-                    <input class="text-input" id="phone" type="tel" value="">
+                    <label for="phone1">Phone number</label>
+                    <input class="text-input" id="phone1" type="tel" value="">
                   </div>
                   <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="phone2">Second contact number <span class="hint">(optional)</span></label>
+                    <input class="text-input" id="phone2" type="tel" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email <span class="hint">(optional)</span></label>
                     <input class="text-input" id="email" type="email" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Preferred contact method</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="contact-phone"><input id="contact-phone" type="radio" name="toggle-buttons"><span>Phone</span></label>
+                      <label class="off label-right" for="contact-email"><input id="contact-email" type="radio" name="toggle-buttons"><span>Email</span></label>
+                    </div>
                   </div>
                   <div class="form-group">
                     <label for="address">Address <span class="hint display-block">Start typing then select an
@@ -110,55 +148,100 @@
                   </div>
                 </fieldset>
 
+                <fieldset>
+                  <legend>Consent forms given to client</legend>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Privacy</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="privacy-yes"><input id="privacy-yes" type="radio" name="toggle-buttons"><span>Yes</span></label>
+                      <label class="off label-right" for="privacy-no"><input id="privacy-no" type="radio" name="toggle-buttons"><span>No</span></label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Publicity</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="publicity-yes"><input id="publicity-yes" type="radio" name="toggle-buttons"><span>Yes</span></label>
+                      <label class="off label-right" for="publicity-no"><input id="publicity-no" type="radio" name="toggle-buttons"><span>No</span></label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Consultation details</legend>
+                  <div class="form-group">
+                    <label for="venue">Venue</label>
+                    <input class="text-input" id="venue" type="text" value="One Tree Hill Learning Centre">
+                  </div>
+                  <div class="form-group">
+                    <label for="comments">Comments <span class="hint">(optional)</span></label>
+                    <textarea class="text-input" id="comments"></textarea>
+                  </div>
+                </fieldset>
+
               </div>
+
               <div class="col-lg-5">
                 <div class="read-only">
-
-                  <h2>Read only data</h2>
                   <table>
-                    <tr>
-                      <th>Visa family name</th>
-                      <td>Durrani</td>
-                    </tr>
-                    <tr>
-                      <th>Visa given name</th>
-                      <td>Eva</td>
-                    </tr>
                     <tr>
                       <th>Visa Grant Number</th>
                       <td>1234567891234</td>
                     </tr>
                     <tr>
-                      <th>Status</th>
-                      <td>Eligible</td>
+                      <th>Visa commencement date</th>
+                      <td>22 July 2018</td>
                     </tr>
                     <tr>
                       <th>Date of birth</th>
                       <td>10 Apr 1992</td>
                     </tr>
                     <tr>
+                      <th>Gender</th>
+                      <td>Female</td>
+                    </tr>
+                    <tr>
                       <th>Country of birth</th>
                       <td>Afghanistan</td>
                     </tr>
                     <tr>
-                      <th>Gender</th>
-                      <td>Female</td>
+                      <th>Language</th>
+                      <td>Dari</td>
+                    </tr>
+                    <tr>
+                      <th>Principal applicant</th>
+                      <td>Yes</td>
                     </tr>
                   </table>
+                  <div class="row chart-container">
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">89</strong> <br />days remaining to enrol<br />
+                        <em>22 Feb 2019</em></p>
+                    </div>
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">65</strong> <br />days remaining for registration<br />
+                        <em>19 Jan 2019</em></p>
+                    </div>
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">112</strong> <br />days to entitlement end<br />
+                        <em>02 Mar 2019</em></p>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
             </div>
+            <div class="btn-pagination">
+                <button class="btn" onclick="window.location.href = 'home.html'">Cancel</button>
+                <div class="floated">
+                  <button class="btn btnNext">Save &amp; Exit</button>&nbsp;
+                  <button class="btn btnNext btn-primary">Save &amp; Book</button>
+                </div>
+              </div>
+
           </div>
       </div>
       <!-- row -->
-      <div class="btn-pagination">
-        <button class="btn" onclick="window.location.href = 'home.html'">Cancel</button>
-        <div class="floated">
-          <button class="btn btnNext">Save &amp; Exit</button>
-          <button class="btn btnNext btn-primary">Save &amp; Book</button>
-        </div>
-      </div>
     </div>
   </div>
 
