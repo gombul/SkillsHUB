@@ -141,7 +141,7 @@
 
                 <div class="childcare" style="display: none">
                   <fieldset>
-                    <legend>Child 1 <span class="floated"><a href="#">Remove</a></span></legend>
+                    <legend>Child 1 <span class="floated"><a class="remove" href="javascript:void(0)">Remove</a></span></legend>
                     <div class="form-group">
                       <label for="c-familyname">Child family name</label>
                       <input id="c-familyname" type="text" value="">
@@ -281,7 +281,7 @@
       $('.childcare').show('fast');
       $('#c-familyname').focus();
     });
-    $('#cc-no').click(function () {
+    $('#cc-no, .remove').click(function () {
       $('.childcare').hide('fast');
       $('#cc-no').focus();
     });
