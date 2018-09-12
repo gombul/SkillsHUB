@@ -170,14 +170,17 @@
     // Test for completed steps
     if (location.hash != 0 && location.hash == '#registrationDone') {
       $('.btn-register').addClass("done");
+      $(".cta-register").text("Assessment");
       //toastr.success('Personal details updated', 'Success');
     }
     if (location.hash != 0 && location.hash == '#assessmentDone') {
       $('.btn-register, .btn-assessment').addClass("done");
-      //toastr.success('Personal details updated', 'Success');
+      $(".cta-register").text("Interview");
+    //toastr.success('Personal details updated', 'Success');
     }
     if (location.hash != 0 && location.hash == '#interviewDone') {
       $('.btn-register, .btn-assessment, .btn-interview').addClass("done");
+      $(".cta-register").text("Enrolment");
       //toastr.success('Personal details updated', 'Success');
     }
 
