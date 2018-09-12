@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Eva - SkillsHUB</title>
+  <title>Interview - SkillsHUB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
@@ -55,51 +55,45 @@
     </ul>
   </div>
   <div id="main-content" class="container-dashboard">
+    <ul class="progress-indicator">
+      <li class="completed">
+        <span class="bubble"></span>
+        <a href="register.html">Register</a>
+      </li>
+      <li class="completed">
+        <span class="bubble"></span>
+        Assessment
+      </li>
+      <li class="active">
+        <span class="bubble"></span>
+        Interview
+      </li>
+      <li>
+        <span class="bubble"></span>
+        Enrolment
+      </li>
+    </ul>
     <div class="row">
       <div class="col-lg-12">
         <section class="widget">
           <div class="widget-header">
-            <h1>Eva Durrani</h1>
+            <p class="floated name">Client: <strong><a href="eva.html">Eva Durrani</a></strong></p>
+            <h1>Interview</h1>
           </div>
           <div class="widget-content">
             <div class="row">
-              <div class="col-lg-8">
-                <div class="contact-card">
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <img src="img/avatar-eva.svg" alt="Avatar" />
-                      <p><button class="btn btn-primary cta-register">Register client</button></p>
-                    </div>
-                    <div class="col-lg-8">
-                      <div class="message message-success">
-                        <h2>Eligible</h2>
-                        <p>This client is eligible for assessment</p>
-                      </div>
-                      <div class="row chart-container">
-                        <div class="col-sm-4 chart-item">
-                          <p><strong class="count">89</strong> <br />days remaining to enrol<br />
-                            <em>22 Feb 2019</em></p>
-                        </div>
-                        <div class="col-sm-4 chart-item">
-                          <p><strong class="count">65</strong> <br />days remaining for registration<br />
-                            <em>19 Jan 2019</em></p>
-                        </div>
-                        <div class="col-sm-4 chart-item">
-                          <p><strong class="count">112</strong> <br />days to entitlement end<br />
-                            <em>02 Mar 2019</em></p>
-                        </div>
-                      </div>
-                    </div>
+              <div class="col-lg-7">
+                <fieldset>
+                  <legend>Legend</legend>
+                  <div class="form-group">
+                    <label for="site">Label</label>
+                    <input class="text-input" id="site" type="text" value="">
                   </div>
-                  <div class="access-buttons">
-                    <button class="btn btn-register">Register</button>
-                    <button class="btn btn-assessment">Assessment</button>
-                    <button class="btn btn-interview">Interview</button>
-                    <button class="btn btn-enrolment">Enrolment</button>
-                  </div>
-                </div>
+                </fieldset>
+
+
               </div>
-              <div class="col-lg-4">
+              <div class="col-lg-5">
                 <div class="read-only">
                   <table>
                     <tr>
@@ -107,11 +101,7 @@
                       <td>1234567891234</td>
                     </tr>
                     <tr>
-                      <th>Initial grant date</th>
-                      <td>22 July 2018</td>
-                    </tr>
-                    <tr>
-                      <th>Initial arrival date</th>
+                      <th>Visa commencement date</th>
                       <td>22 July 2018</td>
                     </tr>
                     <tr>
@@ -135,18 +125,36 @@
                       <td>Yes</td>
                     </tr>
                   </table>
+                  <div class="row chart-container">
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">89</strong> <br />days remaining to enrol<br />
+                        <em>22 Feb 2019</em></p>
+                    </div>
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">65</strong> <br />days remaining for registration<br />
+                        <em>19 Jan 2019</em></p>
+                    </div>
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">112</strong> <br />days to entitlement end<br />
+                        <em>02 Mar 2019</em></p>
+                    </div>
+                  </div>
                 </div>
               </div>
+
             </div>
+            <div class="btn-pagination">
+              <button class="btn" onclick="window.location.href = 'assessment.html'">Previous</button>
+              <div class="floated">
+                <button class="btn btnExit">Save &amp; Exit</button>&nbsp;
+                <button class="btn btnNext btn-primary">Save &amp; Next</button>
+              </div>
+            </div>
+
           </div>
       </div>
       <!-- row -->
-
     </div>
-  </div>
-
-
-
   </div>
   <!-- container -->
   <footer>
@@ -164,61 +172,19 @@
       </div>
     </div>
   </footer>
+
   <script src='js/jquery-3.3.1.min.js'></script>
   <script src='js/common-functions.js'></script>
   <script>
-    // Test for completed steps
-    if (location.hash != 0 && location.hash == '#registrationDone') {
-      $('.btn-register').addClass("done");
-      //toastr.success('Personal details updated', 'Success');
-    }
-    if (location.hash != 0 && location.hash == '#assessmentDone') {
-      $('.btn-register, .btn-assessment').addClass("done");
-      //toastr.success('Personal details updated', 'Success');
-    }
-    if (location.hash != 0 && location.hash == '#interviewDone') {
-      $('.btn-register, .btn-assessment, .btn-interview').addClass("done");
-      //toastr.success('Personal details updated', 'Success');
-    }
-
-    // Button clicks
-    $(".cta-register").click(function () {
-      window.location.href = 'register.html';
-    });
-    $(".btn-register").click(function () {
-      window.location.href = 'register.html';
-    });
-    $(".btn-assessment").click(function () {
-      window.location.href = 'assessment.html';
-    });
-    $(".btn-interview").click(function () {
-      window.location.href = 'interview.html';
-    });
-    $(".btn-enrolment").click(function () {
+    $(".btnNext").click(function () {
       window.location.href = 'enrolment.html';
     });
 
-
-
-
-
-    // Number animate count from zero
-    $(".count").each(function () {
-      $(this)
-        .prop("Counter", 0)
-        .animate(
-          {
-            Counter: $(this).text()
-          },
-          {
-            duration: 1000,
-            easing: "swing",
-            step: function (now) {
-              $(this).text(Math.ceil(now));
-            }
-          }
-        );
+    // Set step status to true
+    $('.btnExit').click(function () {
+      window.location.href = 'eva.html#interviewDone';
     });
+
   </script>
 
 </body>
