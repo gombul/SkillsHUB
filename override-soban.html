@@ -78,7 +78,7 @@
         <section class="widget">
           <div class="widget-header">
             <p class="floated name">Client: <strong><a href="soban.html">Soban Kahn</a></strong></p>
-            <h1>Assessment</h1>
+            <h1>Override</h1>
           </div>
           <div class="widget-content">
             <div class="row">
@@ -123,7 +123,11 @@
                             <input class="yyyy" type="text" name="yyyy-end" id="yyyy-end" maxlength="4" required
                               aria-required="true" aria-label="4 digit year">
                           </div>
-                          <p><a href="javascript:void(0)">Add employer</a> &nbsp;|&nbsp; <a href="javascript:void(0)"
+                          <div class="form-group">
+                            <label for="comments">Comments <span class="hint">(optional)</span></label>
+                            <textarea class="text-input" id="comments"></textarea>
+                          </div>
+                          <p><a href="javascript:void(0)">Add another employer</a> &nbsp;|&nbsp; <a href="javascript:void(0)"
                               class="cancel">Cancel</a></p>
                         </div>
                       </div>
@@ -226,11 +230,11 @@
                   </table>
                   <div class="row chart-container">
                     <div class="col-sm-4 chart-item">
-                      <p><strong class="count">0</strong> <br />days remaining to enrol<br />
+                      <p><strong class="count">0</strong> <br />days remaining for registration<br />
                         <em>05 Aug 2018</em></p>
                     </div>
                     <div class="col-sm-4 chart-item">
-                      <p><strong class="count">121</strong> <br />days remaining for registration<br />
+                      <p><strong class="count">121</strong> <br />days remaining to enrol<br />
                         <em>30 Aug 2018</em></p>
                     </div>
                     <div class="col-sm-4 chart-item">
@@ -278,7 +282,9 @@
     $('.btnNext').click(function () {
       window.location.href = 'soban.html#overrideSubmitted';
     });
-
+    $('.cancel').click(function () {
+      $('.form-group-container').hide("fast");
+    });
     $('.btn-employment').click(function () {
       $('.form-group-container').hide();
       $('.employment').toggle("fast");
