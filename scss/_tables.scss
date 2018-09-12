@@ -51,20 +51,20 @@ table {
   }
 }
 
-.status {
-  th,
-  td {
-    padding: 0.25em 0.5em;
-    font-size: 0.85rem;
-    text-align: left;
-    vertical-align: top;
+.results {
+  td, th {
+    padding: 0.25em 0.5em 0.15em 0.5em;
   }
-
-  th {
-    border-bottom: 1px solid $gray-light;
-    background-color: white;
-    font-weight: normal;
-    border-top: none;
-    text-align: left;
+  .form-group {
+    padding-left: 0;
+  }
+  .skill {
+    width: 40%;
+  }
+  .indicator {
+    width: 20%;
+  }
+  .score {
+    width: 10%;
   }
 }

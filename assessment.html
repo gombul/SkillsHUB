@@ -84,16 +84,245 @@
             <div class="row">
               <div class="col-lg-7">
                 <fieldset>
-                  <legend>Legend</legend>
+                  <legend>Assessment details</legend>
                   <div class="form-group">
-                    <label for="firstname">Label</label>
-                    <input class="text-input" id="firstname" type="text" value="">
+                    <label for="date">Assessment date <span class="hint">(DD / MM / YYYY)</span></label>
+                    <input class="dd" type="text" name="dd-date" id="dd-date" maxlength="2" required aria-required="true"
+                      aria-label="2 digit day" value="06"> /
+                    <input class="mm" type="text" name="mm-date" id="mm-date" maxlength="2" required aria-required="true"
+                      aria-label="2 digit month" value="09"> /
+                    <input class="yyyy" type="text" name="yyyy-date" id="yyyy-date" maxlength="4" required
+                      aria-required="true" aria-label="4 digit year" value="2018">
+                  </div>
+                  <div class="form-group">
+                    <label for="site">Assessment site</label>
+                    <input class="text-input" id="site" type="text" value="One Tree Hill Learning Centre">
+                  </div>
+                  <div class="form-group">
+                    <label for="assessor">Assessor</label>
+                    <input class="text-input" id="assessor" type="text" value="Ralph Stanley">
                   </div>
                 </fieldset>
 
-              </div>
 
+                <fieldset>
+                  <legend>ACSF performance indicators</legend>
+                  <table class="results">
+                    <tr>
+                      <th class="skill">Core skill</th>
+                      <th class="indicator">Indicator</th>
+                      <th class="score">Score</th>
+                      <th class="indicator">Indicator</th>
+                      <th class="score">Score</th>
+                    </tr>
+                    <tr>
+                      <td><strong>Learning</strong></td>
+                      <td>
+                        <div class="form-group">
+                          <label for="indicator1"><span class="sr-only">Select indicator</span></label>
+                          <select id="indicator1">
+                            <option selected>NYA</option>
+                            <option>PLA</option>
+                            <option>PLB</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="result1"><span class="sr-only">Enter result</span></label>
+                          <input id="result1" type="text" value="">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="indicator2"><span class="sr-only">Select indicator</span></label>
+                          <select id="indicator2">
+                            <option selected>NYA</option>
+                            <option>PLA</option>
+                            <option>PLB</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="result2"><span class="sr-only">Enter result</span></label>
+                          <input id="result2" type="text" value="">
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Reading</strong></td>
+                      <td>
+                        <div class="form-group">
+                          <label for="indicator1"><span class="sr-only">Select indicator</span></label>
+                          <select id="indicator1">
+                            <option selected>NYA</option>
+                            <option>PLA</option>
+                            <option>PLB</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="result1"><span class="sr-only">Enter result</span></label>
+                          <input id="result1" type="text" value="">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="indicator2"><span class="sr-only">Select indicator</span></label>
+                          <select id="indicator2">
+                            <option selected>NYA</option>
+                            <option>PLA</option>
+                            <option>PLB</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="result2"><span class="sr-only">Enter result</span></label>
+                          <input id="result2" type="text" value="">
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Writing</strong></td>
+                      <td>
+                        <div class="form-group">
+                          <label for="indicator1"><span class="sr-only">Select indicator</span></label>
+                          <select id="indicator1">
+                            <option selected>NYA</option>
+                            <option>PLA</option>
+                            <option>PLB</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="result1"><span class="sr-only">Enter result</span></label>
+                          <input id="result1" type="text" value="">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="indicator2"><span class="sr-only">Select indicator</span></label>
+                          <select id="indicator2">
+                            <option selected>NYA</option>
+                            <option>PLA</option>
+                            <option>PLB</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="result2"><span class="sr-only">Enter result</span></label>
+                          <input id="result2" type="text" value="">
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><strong>Oral communication</strong></td>
+                      <td>
+                        <div class="form-group">
+                          <label for="indicator1"><span class="sr-only">Select indicator</span></label>
+                          <select id="indicator1">
+                            <option selected>NYA</option>
+                            <option>PLA</option>
+                            <option>PLB</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="result1"><span class="sr-only">Enter result</span></label>
+                          <input id="result1" type="text" value="">
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="indicator2"><span class="sr-only">Select indicator</span></label>
+                          <select id="indicator2">
+                            <option selected>NYA</option>
+                            <option>PLA</option>
+                            <option>PLB</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="form-group">
+                          <label for="result2"><span class="sr-only">Enter result</span></label>
+                          <input id="result2" type="text" value="">
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </fieldset>
+              </div>
               <div class="col-lg-5">
+                <div class="read-only">
+                  <table>
+                    <tr>
+                      <th>Visa Grant Number</th>
+                      <td>1234567891234</td>
+                    </tr>
+                    <tr>
+                      <th>Visa commencement date</th>
+                      <td>22 July 2018</td>
+                    </tr>
+                    <tr>
+                      <th>Date of birth</th>
+                      <td>10 Apr 1992</td>
+                    </tr>
+                    <tr>
+                      <th>Gender</th>
+                      <td>Female</td>
+                    </tr>
+                    <tr>
+                      <th>Country of birth</th>
+                      <td>Afghanistan</td>
+                    </tr>
+                    <tr>
+                      <th>Language</th>
+                      <td>Dari</td>
+                    </tr>
+                    <tr>
+                      <th>Principal applicant</th>
+                      <td>Yes</td>
+                    </tr>
+                  </table>
+                  <div class="row chart-container">
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">89</strong> <br />days remaining to enrol<br />
+                        <em>22 Feb 2019</em></p>
+                    </div>
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">65</strong> <br />days remaining for registration<br />
+                        <em>19 Jan 2019</em></p>
+                    </div>
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">112</strong> <br />days to entitlement end<br />
+                        <em>02 Mar 2019</em></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="key">
+                  <h3>Key</h3>
+                  <dl>
+                    <dt>NYA</dt>
+                    <dd>Not yet achieved</dd>
+                  </dl>
+                  <dl>
+                    <dt>PLA</dt>
+                    <dd>Pre level A</dd>
+                  </dl>
+                  <dl>
+                    <dt>PLB</dt>
+                    <dd>Pre level B</dd>
+                  </dl>
+                </div>
 
               </div>
 
@@ -101,7 +330,7 @@
             <div class="btn-pagination">
               <button class="btn" onclick="window.location.href = 'register.html'">Previous</button>
               <div class="floated">
-                <button class="btn" onclick="window.location.href = 'dashboard.html'">Save &amp; Exit</button>&nbsp;
+                <button class="btn btnExit">Save &amp; Exit</button>&nbsp;
                 <button class="btn btnNext btn-primary">Save &amp; Next</button>
               </div>
             </div>
@@ -145,6 +374,12 @@
     $(".btnNext").click(function () {
       window.location.href = 'interview.html';
     });
+
+    // Set step status to true
+    $('.btnExit').click(function () {
+      window.location.href = 'eva.html#assessmentDone';
+    });
+
   </script>
 
 </body>

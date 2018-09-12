@@ -228,7 +228,7 @@
             <div class="btn-pagination">
               <button class="btn" onclick="window.location.href = 'dashboard.html'">Cancel</button>
               <div class="floated">
-                <button class="btn" onclick="window.location.href = 'dashboard.html'">Save &amp; Exit</button>&nbsp;
+                <button class="btn btnExit">Save &amp; Exit</button>&nbsp;
                 <button class="btn btn-primary" onclick="window.location.href = '#book'">Save &amp; Book</button>
               </div>
             </div>
@@ -278,6 +278,12 @@
     $(".btnNext").click(function () {
       window.location.href = 'assessment.html';
     });
+
+    // Set step status to true
+    $('.btnExit').click(function () {
+      window.location.href = 'eva.html#registrationDone';
+    });
+
   </script>
 
 </body>

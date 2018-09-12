@@ -61,6 +61,17 @@ li {
   max-width: $maxwidth;
 }
 
+dt {
+  float: left;
+  width: 30%;
+  padding: 0.25em;
+  clear: left;
+}
+dd {
+  float: left;
+  width: 60%;
+  padding: 0.25em 0;
+}
 
 // Horizontal Rule styling
 
