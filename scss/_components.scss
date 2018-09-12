@@ -3,7 +3,6 @@
 
 **********************************/
 
-
 // Container for navigation buttons at bottom of screen
 
 .btn-pagination {
@@ -14,7 +13,6 @@
   border-top: 1px solid $gray-light;
 }
 
-
 // Float right for wider displays
 
 @media only screen and (min-width: $small-handheld) {
@@ -24,7 +22,6 @@
     margin-left: 0.25em;
   }
 }
-
 
 // Temporary messages to inform the user of a change
 .toast {
@@ -76,7 +73,6 @@
   }
 }
 
-
 // Highlight with a background colour
 
 .highlight {
@@ -84,7 +80,6 @@
   padding: 0.5em 1.5em 1em 1.5em;
   margin-bottom: 1em;
 }
-
 
 // Styling the word "or" to provide greater distinction between 2 options
 
@@ -100,7 +95,6 @@
     padding: 0.6em 0.5em;
     border-radius: 50%;
     margin-top: 0;
- 
   }
 }
 
@@ -124,7 +118,6 @@
     font-weight: normal;
   }
 }
-
 
 // Contact card in edit user
 
@@ -153,14 +146,22 @@
     padding: 0.1em 0 1em 1.75em;
   }
   &.message-success {
-    background: tint($green, 90%) url(../img/ico-tick-green.svg) no-repeat 1.5em 1.5em;
+    background: tint($green, 90%) url(../img/ico-tick-green.svg) no-repeat 1.5em
+      1.5em;
     background-size: 32px 32px;
     border-radius: 4px;
     border: 1px solid tint($green, 50%);
     padding: 1.5em 1em 0.5em 1.5em;
   }
+  &.message-alert {
+    background: tint($orange, 90%) url(../img/ico-warning-orange.svg) no-repeat
+      1.5em 1.5em;
+    background-size: 32px 32px;
+    border-radius: 4px;
+    border: 1px solid tint($orange, 50%);
+    padding: 1.5em 1em 0.5em 1.5em;
+  }
 }
-
 
 // Bootstrap tabs
 
@@ -181,14 +182,13 @@
       }
 
       &.nav-link.active {
-        -webkit-box-shadow: 0 1px 8px 1px rgba(0,0,0,.15);
-        box-shadow: 0 1px 8px 1px rgba(0,0,0,.15);
+        -webkit-box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.15);
         background-color: $white;
       }
     }
   }
 }
-
 
 // Key
 
@@ -203,5 +203,50 @@
     padding-bottom: 1em;
     border-bottom: 1px solid $yellow;
     margin: 0.5em 0 1em 0;
+  }
+}
+
+// Cards for big box links
+
+.card {
+  margin-bottom: 1em;
+  h2 {
+    padding: 0;
+    margin: 0;
+    a {
+      padding: 1.35em 1em 1.5em 2.75em;
+      background: $white url(../img/ico-settings.svg) no-repeat 1em 1.32em;
+      background-size: 18px 18px;
+      -webkit-box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      margin: 0;
+      display: block;
+      cursor: pointer;
+      border: none !important;
+      font-size: 0.9rem;
+      color: $black;
+      text-decoration: none !important;
+    }
+    &:hover,
+    &:focus {
+      background: tint($black, 90%) url(../img/ico-settings.svg) no-repeat 1em
+        1.05em;
+      background-size: 18px 18px;
+      -webkit-box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
+      color: $black;
+      text-decoration: none !important;
+    }
+  }
+}
+
+// Contains form fields inside the card - hidden by default
+.form-group-container {
+  padding: 1em;
+  display: none;
+
+  .form-group {
+    padding: 0;
   }
 }

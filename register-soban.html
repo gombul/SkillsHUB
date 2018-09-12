@@ -1,0 +1,298 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Register - SkillsHUB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="header-nav">
+    <a class="no-border-link" href="dashboard.html"><img class="logo-skillshub" src="img/logo-skillshub-white.svg" alt="SkillsHUB" /></a>
+    <!--<button class="btn btn-nav-toggle" id="toggle-navigation" aria-expanded="false">Menu</button>-->
+    <div class="container-global-nav">
+      <ul id="ul-global-nav">
+        <li class="nav-inbox">
+          <a href="inbox.html">
+            Inbox
+            <span id="badgeInbox" class="pil">2</span>
+          </a>
+        </li>
+        <li class="nav-profile">
+          <a href="profile.html">Profile</a>
+        </li>
+        <li class="nav-signing">
+          <a href="index.html">Sign out</a>
+        </li>
+      </ul>
+    </div>
+
+  </div><!-- header-nav -->
+
+  <div class="container-functional-nav">
+    <ul id="ul-functional-nav">
+      <li>
+        <a class="home" href="dashboard.html">Home</a>
+      </li>
+      <li>
+        <a class="reports" href="reports.html">Reports</a>
+      </li>
+      <li>
+        <a class="calendar" href="bookings.html">Calendar</a>
+      </li>
+      <li>
+        <a class="checklist" href="attendance.html">Attendance</a>
+      </li>
+      <li>
+        <a class="access" href="manage-users.html">Manage staff</a>
+      </li>
+      <li class="help-links">
+        <a href="help.html">Help and support</a>
+      </li>
+    </ul>
+  </div>
+  <div id="main-content" class="container-dashboard">
+    <ul class="progress-indicator">
+      <!-- use completed or active -->
+      <li class="active">
+        <span class="bubble"></span>
+        Register
+      </li>
+      <li>
+        <span class="bubble"></span>
+        Assessment
+      </li>
+      <li>
+        <span class="bubble"></span>
+        Interview
+      </li>
+      <li>
+        <span class="bubble"></span>
+        Enrolment
+      </li>
+    </ul>
+    <div class="row">
+      <div class="col-lg-12">
+        <section class="widget">
+          <div class="widget-header">
+            <p class="floated name">Client: <strong><a href="soban.html">Soban Kahn</a></strong></p>
+            <h1>Register</h1>
+          </div>
+          <div class="widget-content">
+            <div class="row">
+              <div class="col-lg-7">
+                <fieldset>
+                  <legend>Personal details</legend>
+                  <div class="form-group">
+                    <label for="firstname">Preferred given name</label>
+                    <input class="text-input" id="firstname" type="text" value="Soban">
+                  </div>
+                  <div class="form-group">
+                    <label for="lastname">Preferred family name</label>
+                    <input class="text-input" id="lastname" type="text" value="Kahn">
+                  </div>
+                  <div class="form-group">
+                    <label for="lastname">Home language <span class="hint display-block">Start typing or select from
+                        the list</span></label>
+                    <select class="text-input" id="lastname" type="text" value="">
+                      <option selected>Farsi</option>
+                      <option>Aceh</option>
+                      <option>Acholi</option>
+                      <option>Afar</option>
+                      <option>Akan (alt Twi/Fanti)</option>
+                      <option>Albanian</option>
+                      <option>Amharic</option>
+                      <option>Anuak (alt Anyuak) </option>
+                      <option>Arabic</option>
+                      <option>Arakanese (alt Rakhinz)</option>
+                      <option>Armenian</option>
+                      <option>Assyrian</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Interpreter required?</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="interpreter-yes"><input id="interpreter-yes" type="radio" name="toggle-buttons"><span>Yes</span></label>
+                      <label class="off label-right" for="interpreter-no"><input id="interpreter-no" type="radio" name="toggle-buttons"><span>No</span></label>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Contact details</legend>
+                  <div class="form-group">
+                    <label for="phone1">Phone number</label>
+                    <input class="text-input" id="phone1" type="tel" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="phone2">Second contact number <span class="hint">(optional)</span></label>
+                    <input class="text-input" id="phone2" type="tel" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email <span class="hint">(optional)</span></label>
+                    <input class="text-input" id="email" type="email" value="">
+                  </div>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Preferred contact method</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="contact-phone"><input id="contact-phone" type="radio" name="toggle-buttons"><span>Phone</span></label>
+                      <label class="off label-right" for="contact-email"><input id="contact-email" type="radio" name="toggle-buttons"><span>Email</span></label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address <span class="hint display-block">Start typing then select an
+                        option</span></label>
+                    <input class="text-input" id="address" type="text" value=""><br />
+                    <a href="#">Can't find address?</a>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Consent forms</legend>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Privacy</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="privacy-yes"><input id="privacy-yes" type="radio" name="toggle-buttons"><span>Yes</span></label>
+                      <label class="off label-right" for="privacy-no"><input id="privacy-no" type="radio" name="toggle-buttons"><span>No</span></label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Publicity</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="publicity-yes"><input id="publicity-yes" type="radio" name="toggle-buttons"><span>Yes</span></label>
+                      <label class="off label-right" for="publicity-no"><input id="publicity-no" type="radio" name="toggle-buttons"><span>No</span></label>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset>
+                  <legend>Consultation details</legend>
+                  <div class="form-group">
+                    <label for="venue">Venue</label>
+                    <input class="text-input" id="venue" type="text" value="One Tree Hill Learning Centre">
+                  </div>
+                  <div class="form-group">
+                    <label for="comments">Comments <span class="hint">(optional)</span></label>
+                    <textarea class="text-input" id="comments"></textarea>
+                  </div>
+                </fieldset>
+
+              </div>
+
+              <div class="col-lg-5">
+                <div class="read-only">
+                  <table>
+                    <tr>
+                      <th>Visa Grant Number</th>
+                      <td>1234567891234</td>
+                    </tr>
+                    <tr>
+                      <th>Visa commencement date</th>
+                      <td>05 January 2018</td>
+                    </tr>
+                    <tr>
+                      <th>Date of birth</th>
+                      <td>10 Jan 1978</td>
+                    </tr>
+                    <tr>
+                      <th>Gender</th>
+                      <td>Male</td>
+                    </tr>
+                    <tr>
+                      <th>Country of birth</th>
+                      <td>Afghanistan</td>
+                    </tr>
+                    <tr>
+                      <th>Language</th>
+                      <td>Farsi</td>
+                    </tr>
+                    <tr>
+                      <th>Principal applicant</th>
+                      <td>Yes</td>
+                    </tr>
+                  </table>
+                  <div class="row chart-container">
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">0</strong> <br />days remaining to enrol<br />
+                        <em>05 Aug 2018</em></p>
+                    </div>
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">121</strong> <br />days remaining for registration<br />
+                        <em>30 Aug 2018</em></p>
+                    </div>
+                    <div class="col-sm-4 chart-item">
+                      <p><strong class="count">1338</strong> <br />days to entitlement end<br />
+                        <em>29 Dec 2021</em></p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="btn-pagination">
+              <button class="btn" onclick="window.location.href = 'dashboard.html'">Cancel</button>
+              <div class="floated">
+                <button class="btn btnExit">Save &amp; Exit</button>&nbsp;
+                <button class="btn btn-primary" onclick="window.location.href = '#book'">Save &amp; Book</button>
+              </div>
+            </div>
+
+          </div>
+      </div>
+      <!-- row -->
+    </div>
+
+
+
+
+  </div>
+  <!-- container -->
+  <footer>
+    <div class="row">
+      <div class="col-12">
+        <a href="http://www.education.gov.au/">
+          <img src="img/logo-department-black.svg" alt="Department of Education and Training logo" />
+        </a>
+        <ul>
+          <li><a href="http://www.education.gov.au/disclaimer">Disclaimer</a></li>
+          <li><a href="http://www.education.gov.au/copyright">Copyright</a></li>
+          <li><a href="https://www.education.gov.au/privacy-policy">Privacy</a></li>
+          <li><a href="https://www.education.gov.au/terms-use-departments-website">Terms of use</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <div id="book" class="modal-window">
+    <div>
+      <h2>Not prototyped</h2>
+      <p>Options may include:</p>
+      <ul>
+        <li>Manage bookings within SkillsHUB</li>
+        <li>Open third party application configured during setup</li>
+      </ul>
+      <div class="modal-buttons">
+        <button class="btn" onclick="window.location.href = '#modal-close'">Close</button>
+        <button class="btn btn-primary" onclick="window.location.href = 'assessment-soban.html'">Show assessment screen</button>
+      </div>
+    </div>
+  </div>
+  <script src='js/jquery-3.3.1.min.js'></script>
+  <script src='js/common-functions.js'></script>
+  <script>
+    $(".btnNext").click(function () {
+      window.location.href = 'assessment-soban.html';
+    });
+
+    // Set step status to true
+    $('.btnExit').click(function () {
+      window.location.href = 'soban.html#registrationDone';
+    });
+
+  </script>
+
+</body>
+
+</html>
