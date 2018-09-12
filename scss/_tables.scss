@@ -50,3 +50,21 @@ table {
     background-color: $gray-ultralight;
   }
 }
+
+.status {
+  th,
+  td {
+    padding: 0.25em 0.5em;
+    font-size: 0.85rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    border-bottom: 1px solid $gray-light;
+    background-color: white;
+    font-weight: normal;
+    border-top: none;
+    text-align: left;
+  }
+}

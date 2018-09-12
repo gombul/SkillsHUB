@@ -25,6 +25,9 @@ a {
     color: $black;
     border-color: transparent;
   }
+  &.no-border-link {
+    border: none;
+  }
 }
 
 p {

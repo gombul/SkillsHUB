@@ -11,7 +11,7 @@
 
 <body>
   <div class="header-nav">
-    <img class="logo-skillshub" src="img/logo-skillshub-white.svg" alt="SkillsHUB" />
+    <a class="no-border-link" href="dashboard.html"><img class="logo-skillshub" src="img/logo-skillshub-white.svg" alt="SkillsHUB" /></a>
     <!--<button class="btn btn-nav-toggle" id="toggle-navigation" aria-expanded="false">Menu</button>-->
     <div class="container-global-nav">
       <ul id="ul-global-nav">
@@ -89,7 +89,24 @@
                             <em>02 Mar 2019</em></p>
                         </div>
                       </div>
-                      
+                      <!--<table class="status">
+                        <tr>
+                          <th>Register</th>
+                          <td><span class="status-not-started">Not started</span></td>
+                        </tr>
+                        <tr>
+                          <th>Assessment</th>
+                          <td><span class="status-not-started">Not started</span></td>
+                        </tr>
+                        <tr>
+                          <th>Interview</th>
+                          <td><span class="status-not-started">Not started</span></td>
+                        </tr>
+                        <tr>
+                          <th>Enrolment</th>
+                          <td><span class="status-not-started">Not started</span></td>
+                        </tr>
+                      </table>-->
                     </div>
                   </div>
                 </div>
@@ -175,7 +192,7 @@
           Counter: $(this).text()
         },
         {
-          duration: 2000,
+          duration: 1000,
           easing: "swing",
           step: function(now) {
             $(this).text(Math.ceil(now));

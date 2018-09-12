@@ -119,12 +119,16 @@ $darken-amount: 30% !default;
         .bubble {
             @include bubble-style($complete);
         }
+        a {
+            border: none;
+        }
     }
 
     // current state
 
     > li.active {
         color: $active;
+        font-weight: bold;
         .bubble {
             @include bubble-style($active);
         }
