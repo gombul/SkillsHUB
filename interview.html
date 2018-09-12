@@ -84,13 +84,94 @@
             <div class="row">
               <div class="col-lg-7">
                 <fieldset>
-                  <legend>Legend</legend>
+                  <legend>Unique Student Identifier (USI)</legend>
                   <div class="form-group">
-                    <label for="site">Label</label>
-                    <input class="text-input" id="site" type="text" value="">
+                    <label class="custom-inputs custom-inputs-checkbox">
+                      USI application
+                      <input type="checkbox" checked>
+                      <span class="checkmark"></span>
+                    </label>
                   </div>
                 </fieldset>
 
+                <fieldset>
+                  <legend>Interview details</legend>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Stream</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="pre"><input id="pre" type="radio" name="toggle-buttons"><span>Pre-employment</span></label>
+                      <label class="off label-right" for="soc"><input id="soc" type="radio" name="toggle-buttons"><span>Social</span></label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="schooling">Years of schooling <span class="hint">(0-15)</span></label>
+                    <input class="dd" id="schooling" type="text" value="" maxlength="2">
+                  </div>
+                  <div class="form-group">
+                    <label for="toggle-buttons">Jobseeker?</label>
+                    <div class="radio-toggle clearfix">
+                      <label class="on label-left" for="job-yes"><input id="job-yes" type="radio" name="toggle-buttons"><span>Yes</span></label>
+                      <label class="off label-right" for="job-no"><input id="job-no" type="radio" name="toggle-buttons"><span>No</span></label>
+                    </div>
+                  </div>
+
+                  <div class="jobseeker" style="display: none">
+                    <div class="form-group">
+                      <label for="crn">Centrelink CRN</label>
+                      <input class="input-half" id="crn" type="text" value="">
+                    </div>
+                    <div class="form-group">
+                      <label for="jobseekerid">Jobseeker ID</label>
+                      <input class="input-half" id="jobseekerid" type="text" value="">
+                    </div>
+                    <div class="form-group">
+                      <label for="mutual">Mutual obligation requirements</label>
+                      <input class="input-half" id="mutual" type="text" value="">
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="form-group">
+                  <label for="toggle-buttons">Childcare? <span class="hint">(up to and including 6 years old)</span></label>
+                  <div class="radio-toggle clearfix">
+                    <label class="on label-left" for="cc-yes"><input id="cc-yes" type="radio" name="toggle-buttons"><span>Yes</span></label>
+                    <label class="off label-right" for="cc-no"><input id="cc-no" type="radio" name="toggle-buttons"><span>No</span></label>
+                  </div>
+                </div>
+
+                <div class="childcare" style="display: none">
+                  <fieldset>
+                    <legend>Child 1 <span class="floated"><a href="#">Remove</a></span></legend>
+                    <div class="form-group">
+                      <label for="c-familyname">Child family name</label>
+                      <input id="c-familyname" type="text" value="">
+                    </div>
+                    <div class="form-group">
+                      <label for="c-givenname">Child given name</label>
+                      <input id="c-givenname" type="text" value="">
+                    </div>
+                    <div class="form-group">
+                      <label class="uikit-text-input__label" for="date">Child date of birth <span class="hint">(DD / MM
+                          / YYYY)</span></label>
+                      <input class="dd" type="text" name="dd-date" id="dd-date" maxlength="2" required aria-required="true"
+                        aria-label="2 digit day"> /
+                      <input class="mm" type="text" name="mm-date" id="mm-date" maxlength="2" required aria-required="true"
+                        aria-label="2 digit month"> /
+                      <input class="yyyy" type="text" name="yyyy-date" id="yyyy-date" maxlength="4" required
+                        aria-required="true" aria-label="4 digit year">
+                    </div>
+                    <div class="form-group">
+                      <label for="toggle-buttons">Child gender</label>
+                      <div class="radio-toggle clearfix">
+                        <label class="on narrow label-left" for="male"><input id="male" type="radio" name="toggle-buttons"><span>Male</span></label>
+                        <label class="off narrow label-middle" for="female"><input id="female" type="radio" name="toggle-buttons"><span>Female</span></label>
+                        <label class="off narrow label-right" for="x"><input id="x" type="radio" name="toggle-buttons"><span>X</span></label>
+                      </div>
+                    </div>
+                    <p><button class="btn btn-small">Add another child</button></p>
+                  </fieldset>
+                </div>
+                </fieldset>
 
               </div>
               <div class="col-lg-5">
@@ -185,6 +266,25 @@
       window.location.href = 'eva.html#interviewDone';
     });
 
+    // Show jobseeker fields
+    $('#job-yes').click(function () {
+      $('.jobseeker').show('fast');
+      $('#crn').focus();
+    });
+    $('#job-no').click(function () {
+      $('.jobseeker').hide('fast');
+      $('#job-no').focus();
+    });
+
+    // Show childcare fields
+    $('#cc-yes').click(function () {
+      $('.childcare').show('fast');
+      $('#c-familyname').focus();
+    });
+    $('#cc-no').click(function () {
+      $('.childcare').hide('fast');
+      $('#cc-no').focus();
+    });
   </script>
 
 </body>
