@@ -67,7 +67,7 @@
                 <div class="contact-card">
                   <div class="row">
                     <div class="col-lg-4">
-                      <img src="img/avatar-soban.svg" alt="Avatar" />
+                      <img src="img/avatar-blank.svg" alt="Avatar" />
                       <p><button class="btn btn-primary cta-register">Register client</button></p>
                     </div>
                     <div class="col-lg-8">
@@ -76,21 +76,21 @@
                         <p>This client requires department approval to participate in AMEP.</p>
                       </div>
                       <div class="message message-alert message-submitted" style="display: none">
-                          <h2>Extension pending approval</h2>
-                          <p>We'll notify you when the extension request has been processed.</p>
-                        </div>
-                        <div class="row chart-container">
+                        <h2>Extension pending approval</h2>
+                        <p>We'll notify you when the extension request has been processed.</p>
+                      </div>
+                      <div class="row chart-container">
                         <div class="col-sm-4 chart-item">
                           <p><strong class="count">0</strong> <br />days remaining for registration<br />
-                            <em>05 Aug 2018</em></p>
+                            <em>05 Jul 2018</em></p>
                         </div>
                         <div class="col-sm-4 chart-item">
-                          <p><strong class="count">121</strong> <br />days remaining to enrol<br />
-                            <em>30 Aug 2018</em></p>
+                          <p><strong class="count">109</strong> <br />days remaining to enrol<br />
+                            <em>05 Jan 2019</em></p>
                         </div>
                         <div class="col-sm-4 chart-item">
-                          <p><strong class="count">1338</strong> <br />days to entitlement end<br />
-                            <em>29 Dec 2021</em></p>
+                          <p><strong class="count">1570</strong> <br />days to entitlement end<br />
+                            <em>04 Jan 2023</em></p>
                         </div>
                       </div>
                     </div>
@@ -98,8 +98,9 @@
                   <div class="access-buttons">
                     <button class="btn btn-register">Register</button>
                     <button class="btn btn-assessment">Assessment</button>
+                    <button class="btn btn-override">Override</button>
                     <button class="btn btn-interview">Interview</button>
-                    <button class="btn btn-enrolment">Enrolment</button>
+                    <!--<button class="btn btn-enrolment">Enrolment</button>-->
                   </div>
                 </div>
               </div>
@@ -107,16 +108,24 @@
                 <div class="read-only">
                   <table>
                     <tr>
-                      <th>Visa Grant Number</th>
+                      <th>Visa grant number</th>
                       <td>1234567891234</td>
                     </tr>
                     <tr>
+                      <th>Visa subclass</th>
+                      <td>136</td>
+                    </tr>
+                    <tr>
+                      <th>2nd VAC</th>
+                      <td>Paid</td>
+                    </tr>
+                    <tr>
                       <th>Initial grant date</th>
-                      <td>05 January 2018</td>
+                      <td>17 November 2017</td>
                     </tr>
                     <tr>
                       <th>Initial arrival date</th>
-                      <td>05 January 2018</td>
+                      <td>17 November 2017</td>
                     </tr>
                     <tr>
                       <th>Date of birth</th>
@@ -207,6 +216,9 @@
     });
     $(".btn-assessment").click(function () {
       window.location.href = 'assessment-soban.html';
+    });
+    $(".btn-override").click(function () {
+      window.location.href = 'override-soban.html';
     });
     $(".btn-interview").click(function () {
       window.location.href = 'interview-soban.html';

@@ -171,6 +171,26 @@
                     <p><button class="btn btn-small">Add another child</button></p>
                   </fieldset>
                 </div>
+
+                <div class="form-group">
+                  <label for="distance-buttons">Distance learning?</label>
+                  <div class="radio-toggle clearfix">
+                    <label class="on label-left" for="distance-yes"><input id="distance-yes" type="radio" name="distance-buttons"><span>Yes</span></label>
+                    <label class="off label-right" for="distance-no"><input id="distance-no" type="radio" name="distance-buttons"><span>No</span></label>
+                  </div>
+                </div>
+                <div class="form-group distance" style="display: none">
+                  <label for="distance-date">Distance learning start date <span class="hint">(DD / MM
+                      / YYYY)</span></label>
+                  <input class="dd" type="text" name="dd-distance" id="dd-distance" maxlength="2" required aria-required="true"
+                    aria-label="2 digit day"> /
+                  <input class="mm" type="text" name="mm-distance" id="mm-distance" maxlength="2" required aria-required="true"
+                    aria-label="2 digit month"> /
+                  <input class="yyyy" type="text" name="yyyy-distance" id="yyyy-distance" maxlength="4" required
+                    aria-required="true" aria-label="4 digit year">
+                </div>
+
+               
                 </fieldset>
 
               </div>
@@ -178,12 +198,20 @@
                 <div class="read-only">
                   <table>
                     <tr>
-                      <th>Visa Grant Number</th>
+                      <th>Visa grant number</th>
                       <td>1234567891234</td>
                     </tr>
                     <tr>
+                      <th>Visa subclass</th>
+                      <td>808A</td>
+                    </tr>
+                    <tr>
+                      <th>2nd VAC</th>
+                      <td>Exempt</td>
+                    </tr>
+                    <tr>
                       <th>Visa commencement date</th>
-                      <td>22 July 2018</td>
+                      <td>12 Apr 2018</td>
                     </tr>
                     <tr>
                       <th>Date of birth</th>
@@ -208,16 +236,16 @@
                   </table>
                   <div class="row chart-container">
                     <div class="col-sm-4 chart-item">
-                      <p><strong class="count">29</strong> <br />days remaining for registration<br />
-                        <em>05 Oct 2019</em></p>
+                      <p><strong class="count">24</strong> <br />days remaining for registration<br />
+                        <em>12 Oct 2018</em></p>
                     </div>
                     <div class="col-sm-4 chart-item">
-                      <p><strong class="count">212</strong> <br />days remaining to enrol<br />
-                        <em>04 Jun 2019</em></p>
+                      <p><strong class="count">206</strong> <br />days remaining to enrol<br />
+                        <em>12 Apr 2019</em></p>
                     </div>
                     <div class="col-sm-4 chart-item">
-                      <p><strong class="count">1773</strong> <br />days to entitlement end<br />
-                        <em>17 Jul 2023</em></p>
+                      <p><strong class="count">1666</strong> <br />days to entitlement end<br />
+                        <em>11 Apr 2023</em></p>
                     </div>
                   </div>
                 </div>
@@ -284,7 +312,18 @@
       $('.childcare').hide('fast');
       $('#cc-no').focus();
     });
-  </script>
+
+    // Show distance learning fields
+    $('#distance-yes').click(function () {
+      $('.distance').show('fast');
+      $('#dd-distance').focus();
+    });
+    $('#distance-no').click(function () {
+      $('.distance').hide('fast');
+      $('#distance-no').focus();
+    });
+
+</script>
 
 </body>
 
